@@ -1,0 +1,142 @@
+{
+  "shapes": [
+    {
+      "name": "circle",
+      "color": "red",
+      "bbox": {
+        "x": 60,
+        "y": 80,
+        "width": 201,
+        "height": 201
+      }
+    },
+    {
+      "name": "square",
+      "color": "blue",
+      "bbox": {
+        "x": 460,
+        "y": 80,
+        "width": 201,
+        "height": 201
+      }
+    },
+    {
+      "name": "triangle",
+      "color": "green",
+      "bbox": {
+        "x": 50,
+        "y": 340,
+        "width": 221,
+        "height": 201
+      }
+    },
+    {
+      "name": "rectangle",
+      "color": "yellow",
+      "bbox": {
+        "x": 400,
+        "y": 380,
+        "width": 341,
+        "height": 131
+      }
+    }
+  ],
+  "colors": [
+    {
+      "name": "red swatch",
+      "color": "red",
+      "bbox": {
+        "x": 40,
+        "y": 200,
+        "width": 120,
+        "height": 200
+      }
+    },
+    {
+      "name": "blue swatch",
+      "color": "blue",
+      "bbox": {
+        "x": 190,
+        "y": 200,
+        "width": 120,
+        "height": 200
+      }
+    },
+    {
+      "name": "green swatch",
+      "color": "green",
+      "bbox": {
+        "x": 340,
+        "y": 200,
+        "width": 120,
+        "height": 200
+      }
+    },
+    {
+      "name": "yellow swatch",
+      "color": "yellow",
+      "bbox": {
+        "x": 490,
+        "y": 200,
+        "width": 120,
+        "height": 200
+      }
+    },
+    {
+      "name": "purple swatch",
+      "color": "purple",
+      "bbox": {
+        "x": 640,
+        "y": 200,
+        "width": 120,
+        "height": 200
+      }
+    }
+  ],
+  "overlapping_shapes": [
+    {
+      "name": "square",
+      "color": "blue",
+      "bbox": {
+        "x": 120,
+        "y": 120,
+        "width": 261,
+        "height": 261
+      }
+    },
+    {
+      "name": "circle",
+      "color": "red",
+      "bbox": {
+        "x": 290,
+        "y": 200,
+        "width": 241,
+        "height": 241
+      }
+    },
+    {
+      "name": "triangle",
+      "color": "green",
+      "bbox": {
+        "x": 440,
+        "y": 100,
+        "width": 261,
+        "height": 261
+      }
+    }
+  ],
+  "blank": [],
+  "noise": [],
+  "camouflage": [
+    {
+      "name": "square",
+      "color": "gray",
+      "bbox": {
+        "x": 320,
+        "y": 220,
+        "width": 160,
+        "height": 160
+      }
+    }
+  ]
+}

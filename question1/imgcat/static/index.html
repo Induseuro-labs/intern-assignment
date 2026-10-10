@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Image Catalog</title>
+<style>
+  :root { --bg:#f6f6f4; --panel:#fff; --ink:#1d1d1b; --muted:#6b6b66; --line:#e3e2dd;
+          --det:#e01e78; --user:#14964b; --comp:#1e5ae6; --warn:#b26b00; --bad:#c62828; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; color:var(--ink); background:var(--bg); }
+  header { padding:12px 20px; border-bottom:1px solid var(--line); background:var(--panel); display:flex; gap:16px; align-items:baseline; }
+  header h1 { font-size:17px; margin:0; }
+  header span { color:var(--muted); font-size:13px; }
+  .wrap { display:grid; grid-template-columns: 290px 1fr; min-height: calc(100vh - 50px); }
+  aside { border-right:1px solid var(--line); background:var(--panel); padding:14px; overflow:auto; }
+  main { padding:18px 22px; overflow:auto; }
+  h2 { font-size:13px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); margin:18px 0 8px; }
+  .item { padding:8px 10px; border-radius:8px; cursor:pointer; display:flex; justify-content:space-between; gap:8px; }
+  .item:hover { background:#f0efeb; } .item.sel { background:#e8eefc; }
+  .chip { font-size:11px; padding:1px 7px; border-radius:10px; background:#eee; color:#444; white-space:nowrap; }
+  .chip.detected{background:#fde6f0;color:var(--det)} .chip.manual{background:#e3f4ea;color:var(--user)}
+  .chip.composed,.chip.composition{background:#e6edfc;color:var(--comp)} .chip.failed{background:#fde4e4;color:var(--bad)}
+  .chip.no_objects{background:#fff1dc;color:var(--warn)}
+  input, select, textarea, button { font:inherit; }
+  input[type=text], input[type=number], textarea { width:100%; padding:6px 8px; border:1px solid var(--line); border-radius:6px; background:#fff; }
+  button { padding:6px 12px; border-radius:6px; border:1px solid var(--line); background:#fff; cursor:pointer; }
+  button.primary { background:var(--ink); color:#fff; border-color:var(--ink); }
+  button.danger { color:var(--bad); }
+  button:disabled { opacity:.5; cursor:default; }
+  form { display:grid; gap:6px; }
+  .stage { position:relative; display:inline-block; max-width:100%; border:1px solid var(--line); background:#fff; user-select:none; }
+  .stage img { display:block; max-width:min(100%, 900px); max-height:62vh; }
+  .stage svg { position:absolute; inset:0; width:100%; height:100%; }
+  .stage.drawing { cursor:crosshair; }
+  .toolbar { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin:10px 0; }
+  .meta { color:var(--muted); font-size:13px; }
+  table { border-collapse:collapse; width:100%; background:var(--panel); border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+  th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); font-size:13px; vertical-align:top; }
+  th { background:#fafaf8; color:var(--muted); font-weight:600; }
+  tr.sel td { background:#f3f6fe; } tr.deleted td { color:#aaa; text-decoration:line-through; }
+  .edit { display:grid; grid-template-columns: 120px 1fr 1fr 60px; gap:6px 10px; align-items:center; background:var(--panel);
+          border:1px solid var(--line); border-radius:8px; padding:12px; margin-top:12px; }
+  .edit .h { font-size:12px; color:var(--muted); }
+  .auto { color:var(--muted); font-size:12px; overflow-wrap:anywhere; }
+  .msg { padding:8px 12px; border-radius:6px; margin:8px 0; display:none; }
+  .msg.err { display:block; background:#fde4e4; color:var(--bad); } .msg.ok { display:block; background:#e3f4ea; color:var(--user); }
+  pre { background:#fafaf8; border:1px solid var(--line); padding:10px; border-radius:6px; overflow:auto; font-size:12px; max-height:260px; }
+  .legend { display:flex; gap:14px; font-size:12px; color:var(--muted); }
+  .legend i { display:inline-block; width:10px; height:10px; border-radius:2px; margin-right:4px; vertical-align:-1px; }
+  .tablewrap { overflow-x:auto; }
+  @media (max-width: 860px) {
+    .wrap { grid-template-columns: 1fr; }
+    aside { border-right:0; border-bottom:1px solid var(--line); }
+    main { padding:16px; }
+    .edit { grid-template-columns: 1fr; }
+    .edit .h, .edit > span:empty { display:none; }
+  }
+</style>
+</head>
+<body>
+<header><h1>Image Catalog</h1><span>detection · manual correction · composites</span></header>
+<div class="wrap">
+<aside>
+  <h2>Images</h2>
+  <div id="list"></div>
+  <h2>Add image</h2>
+  <form id="upload">
+    <input type="file" name="file" accept="image/*" required>
+    <input type="text" name="display_name" placeholder="name (optional)">
+    <button class="primary">Upload &amp; detect</button>
+  </form>
+  <h2>Compose</h2>
+  <form id="compose">
+    <textarea name="instruction" rows="3" placeholder="Create an image containing one red apple and one orange" required></textarea>
+    <label class="meta"><input type="checkbox" name="verify"> verify with detector</label>
+    <button class="primary">Generate composite</button>
+  </form>
+</aside>
+<main>
+  <div id="msg" class="msg"></div>
+  <div id="detail"><p class="meta">Select an image.</p></div>
+</main>
+</div>
+<script>
+const $ = s => document.querySelector(s);
+let images = [], current = null, selected = null, drawing = false, pending = null, confirmForce = null;
+
+function msg(text, ok) { const m = $("#msg"); m.textContent = text; m.className = "msg " + (ok ? "ok" : "err");
+  if (ok) setTimeout(() => m.className = "msg", 2500); }
+async function api(method, url, body) {
+  const opt = { method, headers: {} };
+  if (body instanceof FormData) opt.body = body;
+  else if (body !== undefined) { opt.body = JSON.stringify(body); opt.headers["Content-Type"] = "application/json"; }
+  const r = await fetch(url, opt);
+  if (!r.ok) { let d = await r.text(); try { d = JSON.parse(d).detail; } catch {}
+    throw Object.assign(new Error(typeof d === "string" ? d : (d.message || JSON.stringify(d))), { status: r.status }); }
+  return r.status === 204 ? null : r.json();
+}
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+async function refresh(selectId) {
+  images = await api("GET", "/api/images");
+  $("#list").innerHTML = images.map(i => {
+    const st = i.auto.objects_source !== "auto" ? i.auto.objects_source : i.auto.detection_status;
+    return `<div class="item ${current && current.id === i.id ? "sel" : ""}" data-id="${i.id}">
+      <span>${esc(i.user.display_name)} <span class="meta">${i.objects.length}</span></span>
+      <span class="chip ${st}">${st}</span></div>`; }).join("") || '<p class="meta">Empty catalog.</p>';
+  document.querySelectorAll(".item").forEach(el => el.onclick = () => show(el.dataset.id));
+  if (selectId) await show(selectId);
+}
+
+async function show(id) {
+  if (!current || current.id !== id) { pending = null; confirmForce = null; }
+  current = await api("GET", `/api/images/${id}`);
+  if (!current.objects.find(o => o.id === selected)) selected = null;
+  document.querySelectorAll(".item").forEach(el => el.classList.toggle("sel", el.dataset.id === id));
+  render();
+}
+
+function color(o) { return o.origin === "user" || o.edited_fields.length ? "var(--user)" : o.origin === "composition" ? "var(--comp)" : "var(--det)"; }
+
+function render() {
+  const c = current, a = c.auto;
+  const rows = c.objects.map(o => { const e = o.effective, b = e.bbox;
+    return `<tr data-id="${o.id}" class="${o.id === selected ? "sel" : ""} ${o.deleted ? "deleted" : ""}">
+      <td><b style="color:${color(o)}">■</b> ${esc(e.display_name)}</td><td>${esc(e.name)}</td><td>${esc(e.color || "-")}</td>
+      <td>${e.confidence != null ? e.confidence.toFixed(2) : "-"}</td><td>${b.x}, ${b.y}, ${b.width}, ${b.height}</td>
+      <td>${o.origin}</td><td>${o.edited_fields.join(", ") || "-"}</td></tr>`; }).join("");
+  $("#detail").innerHTML = `
+    <h2 style="margin-top:0">${esc(c.user.display_name)}</h2>
+    <div class="meta">${a.width}×${a.height} ${a.format} · kind <b>${a.kind}</b> · style ${a.style || "-"} ·
+      detection <b>${a.detection_status}</b> · objects source <b>${a.objects_source}</b> · ${esc(a.detector_version || "")}
+      ${a.detection_error ? `<br>note: ${esc(a.detection_error)}` : ""}</div>
+    <div class="toolbar">
+      <button id="draw">${drawing ? "Cancel drawing" : "+ Add object (draw box)"}</button>
+      <button id="redetect">Re-run detection</button>
+      <span class="legend"><span><i style="background:var(--det)"></i>detector</span><span><i style="background:var(--user)"></i>user / edited</span><span><i style="background:var(--comp)"></i>composition</span></span>
+    </div>
+    <div class="stage ${drawing ? "drawing" : ""}" id="stage">
+      <img id="img" src="/api/images/${c.id}/file?v=${encodeURIComponent(a.updated_at)}" alt="">
+      <svg id="svg" viewBox="0 0 ${a.width} ${a.height}" preserveAspectRatio="none"></svg>
+    </div>
+    <h2>Objects</h2>
+    <div class="tablewrap"><table><thead><tr><th>display name</th><th>name</th><th>colour</th><th>confidence</th><th>bbox x, y, w, h</th><th>origin</th><th>user-edited</th></tr></thead>
+    <tbody>${rows || '<tr><td colspan="7" class="meta">No objects. Draw a box to add one.</td></tr>'}</tbody></table></div>
+    <div id="editor"></div>
+    ${a.provenance ? `<h2>Provenance</h2><pre>${esc(JSON.stringify(a.provenance, null, 2))}</pre>` : ""}`;
+  drawBoxes();
+  document.querySelectorAll("tbody tr[data-id]").forEach(tr => tr.onclick = () => { selected = tr.dataset.id; render(); });
+  $("#draw").onclick = () => { drawing = !drawing; render(); };
+  $("#redetect").onclick = redetect;
+  setupDrawing();
+  renderEditor();
+}
+
+function drawBoxes() {
+  const svg = $("#svg"), sw = Math.max(2, current.auto.width / 300), fs = Math.max(12, current.auto.width / 55);
+  svg.innerHTML = current.objects.filter(o => !o.deleted).map(o => { const b = o.effective.bbox, col = color(o);
+    return `<g data-id="${o.id}" style="cursor:pointer"><rect x="${b.x}" y="${b.y}" width="${b.width}" height="${b.height}" fill="${o.id === selected ? "rgba(30,90,230,.12)" : "transparent"}" stroke="${col}" stroke-width="${o.id === selected ? sw * 2 : sw}"/>
+      <text x="${b.x + 3}" y="${Math.max(fs, b.y - 4)}" font-size="${fs}" fill="${col}" font-weight="600" paint-order="stroke" stroke="#fff" stroke-width="3">${esc(o.effective.display_name)}</text></g>`; }).join("")
+    + (pending ? `<rect x="${pending.x}" y="${pending.y}" width="${pending.width}" height="${pending.height}" fill="rgba(20,150,75,.15)" stroke="#14964b" stroke-width="${sw}" stroke-dasharray="${sw * 3}"/>` : "");
+  svg.querySelectorAll("g").forEach(g => g.onclick = ev => { if (drawing) return; ev.stopPropagation(); selected = g.dataset.id; render(); });
+}
+
+function toImage(ev) { const r = $("#svg").getBoundingClientRect();
+  return { x: Math.round((ev.clientX - r.left) / r.width * current.auto.width), y: Math.round((ev.clientY - r.top) / r.height * current.auto.height) }; }
+
+function setupDrawing() {
+  const svg = $("#svg"); let start = null, rect = null;
+  svg.onmousedown = ev => { if (!drawing) return; start = toImage(ev);
+    rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+    rect.setAttribute("fill", "rgba(20,150,75,.15)"); rect.setAttribute("stroke", "#14964b"); rect.setAttribute("stroke-width", 3); svg.appendChild(rect); };
+  svg.onmousemove = ev => { if (!start) return; const p = toImage(ev);
+    rect.setAttribute("x", Math.min(start.x, p.x)); rect.setAttribute("y", Math.min(start.y, p.y));
+    rect.setAttribute("width", Math.abs(p.x - start.x)); rect.setAttribute("height", Math.abs(p.y - start.y)); };
+  svg.onmouseup = async ev => { if (!start) return; const p = toImage(ev), W = current.auto.width, H = current.auto.height;
+    const x = Math.max(0, Math.min(start.x, p.x)), y = Math.max(0, Math.min(start.y, p.y));
+    const bbox = { x, y, width: Math.min(W, Math.max(start.x, p.x)) - x, height: Math.min(H, Math.max(start.y, p.y)) - y };
+    start = null;
+    if (bbox.width < 4 || bbox.height < 4) { render(); return; }
+    pending = bbox; drawing = false; selected = null; render(); $("#n-name").focus(); };
+}
+
+function renderEditor() {
+  if (confirmForce) {
+    $("#editor").innerHTML = `<div class="edit"><span>Re-run detection?</span><span class="auto" style="grid-column: span 2">${esc(confirmForce)}<br>
+      The corrected objects will be replaced by fresh detector output (they stay in the run history).</span><span></span>
+      <span></span><span style="display:flex;gap:8px"><button class="primary" id="force">Replace corrections</button><button id="keep">Keep corrections</button></span><span></span><span></span></div>`;
+    $("#force").onclick = async () => { confirmForce = null; await api("POST", `/api/images/${current.id}/detect?force=true`);
+      msg("Detection re-run; corrections archived in history", true); await refresh(current.id); };
+    $("#keep").onclick = () => { confirmForce = null; render(); };
+    return;
+  }
+  if (pending) {
+    const b = pending;
+    $("#editor").innerHTML = `<div class="edit"><span class="h">new object</span><span class="h">value</span><span class="h"></span><span></span>
+      <span>name</span><input type="text" id="n-name" placeholder="e.g. square"><span class="auto">required</span><span></span>
+      <span>colour</span><input type="text" id="n-color" placeholder="optional"><span></span><span></span>
+      <span>bbox</span><span class="auto">${b.x}, ${b.y}, ${b.width}, ${b.height}</span><span></span><span></span>
+      <span></span><span style="display:flex;gap:8px"><button class="primary" id="n-add">Add object</button><button id="n-cancel">Cancel</button></span><span></span><span></span></div>`;
+    $("#n-cancel").onclick = () => { pending = null; render(); };
+    $("#n-add").onclick = async () => { const name = $("#n-name").value.trim(); if (!name) return msg("Name is required");
+      try { const o = await api("POST", `/api/images/${current.id}/objects`, { name, bbox: b, color: $("#n-color").value.trim() || null, confidence: 1.0 });
+        pending = null; selected = o.id; msg(`Added “${name}”`, true); await refresh(current.id); } catch (e) { msg(e.message); } };
+    return;
+  }
+  const o = current.objects.find(o => o.id === selected); if (!o) { $("#editor").innerHTML = ""; return; }
+  const e = o.effective, au = o.auto || {}, u = o.user, b = e.bbox;
+  const row = (label, field, input) => `<span>${label}</span>${input}<span class="auto">${o.auto ? "detector: " + esc(JSON.stringify(au[field] ?? null)) : "user-created"}</span>
+    <span>${field in u ? `<button data-revert="${field}" title="drop override">↺</button>` : ""}</span>`;
+  $("#editor").innerHTML = `<div class="edit">
+    <span class="h">field</span><span class="h">value (editable)</span><span class="h">auto (read-only)</span><span></span>
+    ${row("name", "name", `<input type="text" id="f-name" value="${esc(e.name)}">`)}
+    ${row("display name", "display_name", `<input type="text" id="f-display_name" value="${esc(e.display_name)}">`)}
+    ${row("colour", "color", `<input type="text" id="f-color" value="${esc(e.color || "")}">`)}
+    ${row("confidence", "confidence", `<input type="number" id="f-confidence" min="0" max="1" step="0.01" value="${e.confidence ?? ""}">`)}
+    ${row("bbox x,y,w,h", "bbox", `<input type="text" id="f-bbox" value="${b.x}, ${b.y}, ${b.width}, ${b.height}">`)}
+    <span></span><span style="display:flex;gap:8px"><button class="primary" id="save">Save correction</button>
+      ${o.deleted ? `<button id="restore">Restore</button>` : `<button class="danger" id="del">Delete object</button>`}</span><span class="auto">id ${o.id} · origin ${o.origin}</span><span></span></div>`;
+  $("#save").onclick = async () => {
+    const [x, y, width, height] = $("#f-bbox").value.split(",").map(v => parseInt(v.trim(), 10));
+    const patch = {}, cand = { name: $("#f-name").value.trim(), display_name: $("#f-display_name").value.trim(),
+      color: $("#f-color").value.trim() || null, confidence: $("#f-confidence").value === "" ? null : parseFloat($("#f-confidence").value) };
+    for (const [k, v] of Object.entries(cand)) if (v !== null && v !== (e[k] ?? null)) patch[k] = v;
+    if (x !== b.x || y !== b.y || width !== b.width || height !== b.height) patch.bbox = { x, y, width, height };
+    if (!Object.keys(patch).length) return msg("Nothing changed", true);
+    try { await api("PATCH", `/api/objects/${o.id}`, patch); msg("Correction saved — it is now the source of truth", true); await refresh(current.id); }
+    catch (err) { msg(err.message); } };
+  const del = $("#del"); if (del) del.onclick = async () => { await api("DELETE", `/api/objects/${o.id}`); msg("Object removed", true); await refresh(current.id); };
+  const res = $("#restore"); if (res) res.onclick = async () => { await api("POST", `/api/objects/${o.id}/restore`); await refresh(current.id); };
+  document.querySelectorAll("[data-revert]").forEach(btn => btn.onclick = async () => {
+    await api("POST", `/api/objects/${o.id}/revert/${btn.dataset.revert}`); await refresh(current.id); });
+}
+
+async function redetect() {
+  const btn = $("#redetect"); btn.disabled = true; btn.textContent = "Detecting…";
+  try { await api("POST", `/api/images/${current.id}/detect`); msg("Detection finished", true); }
+  catch (e) {
+    if (e.status === 409) { confirmForce = e.message; selected = null; pending = null; }
+    else msg(e.message);
+  }
+  await refresh(current.id);
+}
+
+$("#upload").onsubmit = async ev => { ev.preventDefault(); const fd = new FormData(ev.target), btn = ev.target.querySelector("button");
+  btn.disabled = true; btn.textContent = "Detecting…";
+  try { const img = await api("POST", "/api/images", fd); ev.target.reset(); await refresh(img.id); msg("Image added", true); }
+  catch (e) { msg(e.message); } btn.disabled = false; btn.textContent = "Upload & detect"; };
+$("#compose").onsubmit = async ev => { ev.preventDefault(); const f = ev.target, btn = f.querySelector("button");
+  btn.disabled = true; btn.textContent = "Composing…";
+  try { const img = await api("POST", "/api/composites", { instruction: f.instruction.value, verify: f.verify.checked });
+    await refresh(img.id); msg("Composite saved as a new catalog entry", true); }
+  catch (e) { msg(e.message); } btn.disabled = false; btn.textContent = "Generate composite"; };
+refresh().then(() => images[0] && show(images[0].id));
+</script>
+</body>
+</html>
