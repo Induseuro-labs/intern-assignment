@@ -1,0 +1,1264 @@
+{
+ "questions": [
+  {
+   "text": "Define reflection of light.",
+   "tags": {
+    "chapter": "light",
+    "topic": "reflection",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "State the two laws of reflection of light.",
+   "tags": {
+    "chapter": "light",
+    "topic": "reflection",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "Write down the two laws that govern the reflection of light from a surface.",
+   "tags": {
+    "chapter": "light",
+    "topic": "reflection",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "What are the laws of reflection? State both of them.",
+   "tags": {
+    "chapter": "light",
+    "topic": "reflection",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "List four characteristics of the image formed by a plane mirror.",
+   "tags": {
+    "chapter": "light",
+    "topic": "reflection",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "Describe the nature of the image formed by a plane mirror, mentioning its size, orientation, distance and whether it is real or virtual.",
+   "tags": {
+    "chapter": "light",
+    "topic": "reflection",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "Name four properties of an image formed in a plane mirror.",
+   "tags": {
+    "chapter": "light",
+    "topic": "reflection",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "A ray of light strikes a plane mirror at an angle of incidence of 35°. Calculate the angle of reflection and the angle between the incident ray and the reflected ray.",
+   "tags": {
+    "chapter": "light",
+    "topic": "reflection",
+    "difficulty": "medium",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "Distinguish between regular reflection and diffuse reflection. Give one example of each.",
+   "tags": {
+    "chapter": "light",
+    "topic": "reflection",
+    "difficulty": "medium",
+    "type": "conceptual"
+   }
+  },
+  {
+   "text": "A book is not a source of light, yet you can see it from any position in a classroom. Explain why.",
+   "tags": {
+    "chapter": "light",
+    "topic": "reflection",
+    "difficulty": "medium",
+    "type": "reasoning"
+   }
+  },
+  {
+   "text": "Draw a ray diagram to show how a plane mirror forms the image of a point object placed in front of it. Label the normal, the incident rays, the reflected rays and the image.",
+   "tags": {
+    "chapter": "light",
+    "topic": "reflection",
+    "difficulty": "medium",
+    "type": "diagram"
+   }
+  },
+  {
+   "text": "A girl stands 2.5 m in front of a plane mirror. How far is she from her image? If she moves 1 m closer to the mirror, what is the new distance between her and her image?",
+   "tags": {
+    "chapter": "light",
+    "topic": "reflection",
+    "difficulty": "easy",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "A boy walks towards a plane mirror at a speed of 1.5 m/s. At what speed does his image appear to approach him?",
+   "tags": {
+    "chapter": "light",
+    "topic": "reflection",
+    "difficulty": "medium",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "A ray of light makes an angle of 30° with the surface of a plane mirror. Find the angle of incidence, the angle of reflection and the angle between the incident and reflected rays.",
+   "tags": {
+    "chapter": "light",
+    "topic": "reflection",
+    "difficulty": "medium",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "The word 'AMBULANCE' is written laterally inverted on the front of the vehicle. Explain why this is done.",
+   "tags": {
+    "chapter": "light",
+    "topic": "reflection",
+    "difficulty": "medium",
+    "type": "application"
+   }
+  },
+  {
+   "text": "Why does a wet road at night produce a stronger glare from car headlights than a dry road? Explain using the ideas of regular and diffuse reflection.",
+   "tags": {
+    "chapter": "light",
+    "topic": "reflection",
+    "difficulty": "hard",
+    "type": "reasoning"
+   }
+  },
+  {
+   "text": "A plane mirror is rotated by 20° about an axis in its surface while the incident ray stays fixed. Through what angle does the reflected ray turn? Justify your answer.",
+   "tags": {
+    "chapter": "light",
+    "topic": "reflection",
+    "difficulty": "hard",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "Two plane mirrors are placed at 90° to each other. A ray strikes one mirror, reflects to the second, and then reflects again. Draw the ray path and show that the final ray is parallel to the incident ray.",
+   "tags": {
+    "chapter": "light",
+    "topic": "reflection",
+    "difficulty": "hard",
+    "type": "diagram"
+   }
+  },
+  {
+   "text": "A rough paper surface scatters light in many directions. Does this mean the laws of reflection are not obeyed there? Explain your answer.",
+   "tags": {
+    "chapter": "light",
+    "topic": "reflection",
+    "difficulty": "hard",
+    "type": "conceptual"
+   }
+  },
+  {
+   "text": "A person 1.8 m tall wants to see his full image in a vertical plane mirror. What is the minimum height of the mirror needed, and does this depend on his distance from the mirror? Explain with a ray diagram.",
+   "tags": {
+    "chapter": "light",
+    "topic": "reflection",
+    "difficulty": "hard",
+    "type": "application"
+   }
+  },
+  {
+   "text": "Define the principal focus of a concave mirror.",
+   "tags": {
+    "chapter": "light",
+    "topic": "spherical mirrors",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "What is meant by the principal focus of a concave mirror? Explain with the help of a labelled diagram.",
+   "tags": {
+    "chapter": "light",
+    "topic": "spherical mirrors",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "State what is meant by the focus (principal focus) of a concave mirror.",
+   "tags": {
+    "chapter": "light",
+    "topic": "spherical mirrors",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "Define the centre of curvature and the radius of curvature of a spherical mirror. How is the focal length related to the radius of curvature?",
+   "tags": {
+    "chapter": "light",
+    "topic": "spherical mirrors",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "The radius of curvature of a concave mirror is 30 cm. Calculate its focal length. What would the focal length be if the mirror were convex with the same radius of curvature (state the sign)?",
+   "tags": {
+    "chapter": "light",
+    "topic": "spherical mirrors",
+    "difficulty": "easy",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "State the Cartesian sign convention used for spherical mirrors. Give the signs of u, v, f and h for a real object placed in front of a concave mirror forming a real image.",
+   "tags": {
+    "chapter": "light",
+    "topic": "spherical mirrors",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "Draw a ray diagram for an object placed beyond the centre of curvature of a concave mirror. State the position, size and nature of the image formed.",
+   "tags": {
+    "chapter": "light",
+    "topic": "spherical mirrors",
+    "difficulty": "medium",
+    "type": "diagram"
+   }
+  },
+  {
+   "text": "Draw a ray diagram to show image formation when an object is placed between the pole and the principal focus of a concave mirror. State the nature of the image and give one use of this arrangement.",
+   "tags": {
+    "chapter": "light",
+    "topic": "spherical mirrors",
+    "difficulty": "medium",
+    "type": "diagram"
+   }
+  },
+  {
+   "text": "An object 10 cm tall is placed 30 cm in front of a concave mirror of focal length 20 cm. Find the position, nature and height of the image.",
+   "tags": {
+    "chapter": "light",
+    "topic": "spherical mirrors",
+    "difficulty": "medium",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "A 10 cm high object stands 30 cm from a concave mirror whose focal length is 20 cm. Using the mirror formula, calculate where the image forms, whether it is real or virtual, and how tall it is.",
+   "tags": {
+    "chapter": "light",
+    "topic": "spherical mirrors",
+    "difficulty": "medium",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "Using the mirror formula and magnification formula, determine the image distance, the type of image (real/virtual, erect/inverted) and the image size for a 10 cm tall object kept 30 cm away from a concave mirror of focal length 20 cm.",
+   "tags": {
+    "chapter": "light",
+    "topic": "spherical mirrors",
+    "difficulty": "medium",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "An object is placed 30 cm in front of a convex mirror of focal length 15 cm. Find the image distance and the magnification. Is the image real or virtual?",
+   "tags": {
+    "chapter": "light",
+    "topic": "spherical mirrors",
+    "difficulty": "medium",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "Can a convex mirror ever form a real image of a real object? Explain with the help of the behaviour of reflected rays.",
+   "tags": {
+    "chapter": "light",
+    "topic": "spherical mirrors",
+    "difficulty": "medium",
+    "type": "conceptual"
+   }
+  },
+  {
+   "text": "Where should an object be placed in front of a concave mirror to obtain a real, inverted image of the same size as the object? Draw the ray diagram.",
+   "tags": {
+    "chapter": "light",
+    "topic": "spherical mirrors",
+    "difficulty": "medium",
+    "type": "diagram"
+   }
+  },
+  {
+   "text": "Why are convex mirrors preferred as rear-view mirrors in vehicles, while dentists use concave mirrors? Explain with reference to the images formed.",
+   "tags": {
+    "chapter": "light",
+    "topic": "spherical mirrors",
+    "difficulty": "medium",
+    "type": "application"
+   }
+  },
+  {
+   "text": "You are given three mirrors, one plane, one concave and one convex, but you may not touch their surfaces. How can you identify each by holding it close to your face and then moving it away? Explain your reasoning.",
+   "tags": {
+    "chapter": "light",
+    "topic": "spherical mirrors",
+    "difficulty": "medium",
+    "type": "reasoning"
+   }
+  },
+  {
+   "text": "A concave mirror forms a real image three times the size of an object placed 20 cm from the mirror. Find the image distance and the focal length of the mirror.",
+   "tags": {
+    "chapter": "light",
+    "topic": "spherical mirrors",
+    "difficulty": "hard",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "A concave mirror of focal length 20 cm is used to obtain an erect image four times the size of the object. Calculate the distance at which the object must be placed and explain why the image is virtual.",
+   "tags": {
+    "chapter": "light",
+    "topic": "spherical mirrors",
+    "difficulty": "hard",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "Explain why a convex mirror always forms a virtual, erect and diminished image whatever the object position, and why this gives it a wider field of view than a plane mirror of the same size.",
+   "tags": {
+    "chapter": "light",
+    "topic": "spherical mirrors",
+    "difficulty": "hard",
+    "type": "reasoning"
+   }
+  },
+  {
+   "text": "Large concave mirrors are used in solar cookers and solar furnaces, and concave mirrors are used in torches and car headlights. Explain how the same type of mirror serves both purposes, using ray diagrams to show the position of the light source or the target relative to the focus.",
+   "tags": {
+    "chapter": "light",
+    "topic": "spherical mirrors",
+    "difficulty": "hard",
+    "type": "application"
+   }
+  },
+  {
+   "text": "State the mirror formula for a spherical mirror and explain what each symbol in it represents.",
+   "tags": {
+    "chapter": "light",
+    "topic": "mirror formula",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "Write the relation connecting object distance, image distance and focal length for a spherical mirror, and say what u, v and f stand for.",
+   "tags": {
+    "chapter": "light",
+    "topic": "mirror formula",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "What is the mirror formula? Explain the meaning of every term used in it.",
+   "tags": {
+    "chapter": "light",
+    "topic": "mirror formula",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "Define linear magnification produced by a spherical mirror. Write its expression in terms of (a) image height and object height, and (b) image distance and object distance.",
+   "tags": {
+    "chapter": "light",
+    "topic": "mirror formula",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "State the New Cartesian sign convention for measuring distances and heights in the case of spherical mirrors.",
+   "tags": {
+    "chapter": "light",
+    "topic": "mirror formula",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "Why is the focal length of a concave mirror taken as negative and that of a convex mirror as positive in the New Cartesian sign convention? Explain with reference to the position of the principal focus.",
+   "tags": {
+    "chapter": "light",
+    "topic": "mirror formula",
+    "difficulty": "medium",
+    "type": "conceptual"
+   }
+  },
+  {
+   "text": "An object is placed 10 cm in front of a concave mirror of focal length 15 cm. Using the mirror formula, find the position of the image, its magnification, and state its nature.",
+   "tags": {
+    "chapter": "light",
+    "topic": "mirror formula",
+    "difficulty": "medium",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "A 6 cm tall object is placed 30 cm in front of a concave mirror of focal length 10 cm. Find the position, size and nature of the image.",
+   "tags": {
+    "chapter": "light",
+    "topic": "mirror formula",
+    "difficulty": "medium",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "An object 6 cm high stands 30 cm from a concave mirror whose focal length is 10 cm. Calculate where the image forms, how tall it is, and whether it is erect or inverted.",
+   "tags": {
+    "chapter": "light",
+    "topic": "mirror formula",
+    "difficulty": "medium",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "Calculate the distance of the image formed by a concave mirror of focal length 10 cm when a 6 cm tall object is kept 30 cm in front of it. Also find the image height and say whether it is real or virtual.",
+   "tags": {
+    "chapter": "light",
+    "topic": "mirror formula",
+    "difficulty": "medium",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "A convex mirror has a focal length of 20 cm. An object is placed 20 cm in front of it. Find the image distance and the magnification, and state the nature of the image.",
+   "tags": {
+    "chapter": "light",
+    "topic": "mirror formula",
+    "difficulty": "medium",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "Using the mirror formula, show that a convex mirror can never form a real image of a real object.",
+   "tags": {
+    "chapter": "light",
+    "topic": "mirror formula",
+    "difficulty": "hard",
+    "type": "reasoning"
+   }
+  },
+  {
+   "text": "What does a positive value of magnification tell you about the image formed by a spherical mirror? What does a negative value tell you? Also explain what the magnitude of m tells you about image size.",
+   "tags": {
+    "chapter": "light",
+    "topic": "mirror formula",
+    "difficulty": "medium",
+    "type": "conceptual"
+   }
+  },
+  {
+   "text": "Draw a ray diagram for an object placed between the pole and the focus of a concave mirror. State the signs of v and m for this image and verify them using the mirror formula.",
+   "tags": {
+    "chapter": "light",
+    "topic": "mirror formula",
+    "difficulty": "medium",
+    "type": "diagram"
+   }
+  },
+  {
+   "text": "A real image formed by a concave mirror is twice the size of the object and lies 40 cm from the mirror. Find the object distance and the focal length of the mirror.",
+   "tags": {
+    "chapter": "light",
+    "topic": "mirror formula",
+    "difficulty": "hard",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "A dentist uses a concave mirror to see an upright image of a tooth magnified 5 times. The tooth is 2 cm from the mirror. Find the focal length of the mirror.",
+   "tags": {
+    "chapter": "light",
+    "topic": "mirror formula",
+    "difficulty": "hard",
+    "type": "application"
+   }
+  },
+  {
+   "text": "A convex rear-view mirror of focal length 3 m is fitted to a car. Another car 1.5 m tall is 6 m behind it. Find the position and height of the image of the second car.",
+   "tags": {
+    "chapter": "light",
+    "topic": "mirror formula",
+    "difficulty": "medium",
+    "type": "application"
+   }
+  },
+  {
+   "text": "A concave mirror forms a real image the same size as the object, at a distance of 40 cm from the mirror. Find the focal length and the radius of curvature of the mirror.",
+   "tags": {
+    "chapter": "light",
+    "topic": "mirror formula",
+    "difficulty": "medium",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "A concave mirror has a radius of curvature of 24 cm. At what distance from the mirror should an object be placed to get a real image three times its size? Also find the image distance.",
+   "tags": {
+    "chapter": "light",
+    "topic": "mirror formula",
+    "difficulty": "hard",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "A convex mirror forms a virtual image one-third the size of the object. The image is 6 cm behind the mirror. Find the object distance and the focal length of the mirror.",
+   "tags": {
+    "chapter": "light",
+    "topic": "mirror formula",
+    "difficulty": "hard",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "Define refraction of light. State the condition under which a ray of light passes from one medium to another without bending.",
+   "tags": {
+    "chapter": "light",
+    "topic": "refraction",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "State the laws of refraction of light (Snell's laws) and write the mathematical form of the second law.",
+   "tags": {
+    "chapter": "light",
+    "topic": "refraction",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "Define the absolute refractive index of a medium. Write two expressions for it, one in terms of the speed of light and one in terms of angles.",
+   "tags": {
+    "chapter": "light",
+    "topic": "refraction",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "Explain, in terms of the speed of light, why a ray bends towards the normal when it travels from air into glass.",
+   "tags": {
+    "chapter": "light",
+    "topic": "refraction",
+    "difficulty": "medium",
+    "type": "conceptual"
+   }
+  },
+  {
+   "text": "The refractive index of glass is 1.5. If the speed of light in air is 3 × 10^8 m/s, calculate the speed of light in glass.",
+   "tags": {
+    "chapter": "light",
+    "topic": "refraction",
+    "difficulty": "easy",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "A ray of light in air strikes a glass surface (refractive index 1.5) at an angle of incidence of 30°. Calculate the angle of refraction.",
+   "tags": {
+    "chapter": "light",
+    "topic": "refraction",
+    "difficulty": "medium",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "Draw a neat ray diagram showing the path of a ray of light through a rectangular glass slab. Label the incident ray, refracted ray, emergent ray, angle of incidence, angle of emergence and lateral displacement.",
+   "tags": {
+    "chapter": "light",
+    "topic": "refraction",
+    "difficulty": "medium",
+    "type": "diagram"
+   }
+  },
+  {
+   "text": "On which factors does the lateral displacement of a ray passing through a glass slab depend? State how it changes with each factor.",
+   "tags": {
+    "chapter": "light",
+    "topic": "refraction",
+    "difficulty": "medium",
+    "type": "conceptual"
+   }
+  },
+  {
+   "text": "A swimming pool is 2.0 m deep and filled with water of refractive index 4/3. Calculate the apparent depth of the pool when viewed vertically from above.",
+   "tags": {
+    "chapter": "light",
+    "topic": "refraction",
+    "difficulty": "medium",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "A pencil kept partly immersed in water in a glass appears bent at the water surface. Explain why this happens with the help of a ray diagram.",
+   "tags": {
+    "chapter": "light",
+    "topic": "refraction",
+    "difficulty": "medium",
+    "type": "application"
+   }
+  },
+  {
+   "text": "The refractive index of water with respect to air is 4/3 and that of glass with respect to air is 3/2. Find the refractive index of glass with respect to water.",
+   "tags": {
+    "chapter": "light",
+    "topic": "refraction",
+    "difficulty": "medium",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "Why is the emergent ray parallel to the incident ray when light passes through a rectangular glass slab? Why is it laterally displaced?",
+   "tags": {
+    "chapter": "light",
+    "topic": "refraction",
+    "difficulty": "medium",
+    "type": "reasoning"
+   }
+  },
+  {
+   "text": "A coin at the bottom of a beaker of water appears raised when viewed from directly above. Show that, for near-normal viewing, the refractive index of water is equal to real depth divided by apparent depth.",
+   "tags": {
+    "chapter": "light",
+    "topic": "refraction",
+    "difficulty": "hard",
+    "type": "reasoning"
+   }
+  },
+  {
+   "text": "The refractive indices of diamond, glass and water are 2.42, 1.50 and 1.33 respectively. Light enters each from air at the same angle of incidence. In which medium does the ray bend the most, and in which is the speed of light the greatest? Give reasons.",
+   "tags": {
+    "chapter": "light",
+    "topic": "refraction",
+    "difficulty": "medium",
+    "type": "conceptual"
+   }
+  },
+  {
+   "text": "A coin lies at the bottom of a container. It is covered first by a 4 cm layer of water (refractive index 4/3) and then by a 3 cm thick glass slab (refractive index 1.5) on top. Find the apparent depth of the coin when viewed from above through the glass.",
+   "tags": {
+    "chapter": "light",
+    "topic": "refraction",
+    "difficulty": "hard",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "A ray of light in air strikes the surface of a liquid at an angle of incidence of 53°. The reflected ray and the refracted ray are perpendicular to each other. Find the angle of refraction and the refractive index of the liquid. (sin 53° = 0.8, sin 37° = 0.6)",
+   "tags": {
+    "chapter": "light",
+    "topic": "refraction",
+    "difficulty": "hard",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "What is meant by refraction of light?",
+   "tags": {
+    "chapter": "light",
+    "topic": "refraction",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "Explain the phenomenon of refraction of light in your own words, stating what happens to a ray when it moves from one transparent medium into another.",
+   "tags": {
+    "chapter": "light",
+    "topic": "refraction",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "Water in a pool is 2 m deep and has a refractive index of 4/3. How deep does the pool appear to an observer looking straight down into it?",
+   "tags": {
+    "chapter": "light",
+    "topic": "refraction",
+    "difficulty": "medium",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "An observer looks vertically down into a tank containing water to a depth of 2.0 m (refractive index of water = 1.33). Find the apparent depth of the bottom of the tank and by how much it appears raised.",
+   "tags": {
+    "chapter": "light",
+    "topic": "refraction",
+    "difficulty": "medium",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "Define the principal focus of a convex lens. Draw a labelled diagram to illustrate your answer.",
+   "tags": {
+    "chapter": "light",
+    "topic": "lenses",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "Distinguish between a convex lens and a concave lens in terms of (a) shape, and (b) the effect each has on a beam of light parallel to the principal axis.",
+   "tags": {
+    "chapter": "light",
+    "topic": "lenses",
+    "difficulty": "easy",
+    "type": "conceptual"
+   }
+  },
+  {
+   "text": "Define the power of a lens. State its SI unit and the sign of the power for a convex lens and for a concave lens.",
+   "tags": {
+    "chapter": "light",
+    "topic": "lenses",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "Define the power of a lens. State its SI unit and the sign of the power for a convex lens and for a concave lens.",
+   "tags": {
+    "chapter": "light",
+    "topic": "lenses",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "What is meant by the power of a lens? Give its SI unit and say whether it is positive or negative for converging and diverging lenses.",
+   "tags": {
+    "chapter": "light",
+    "topic": "lenses",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "Write the lens formula and state the sign convention used for object distance, image distance and focal length for a convex lens and a concave lens.",
+   "tags": {
+    "chapter": "light",
+    "topic": "lenses",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "An object is placed 30 cm in front of a convex lens of focal length 20 cm. Use the lens formula to find the position of the image and state its nature (real/virtual, erect/inverted, magnified/diminished).",
+   "tags": {
+    "chapter": "light",
+    "topic": "lenses",
+    "difficulty": "medium",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "Draw a ray diagram to show the image formed by a convex lens when the object is placed between F and 2F. State the position, size and nature of the image.",
+   "tags": {
+    "chapter": "light",
+    "topic": "lenses",
+    "difficulty": "medium",
+    "type": "diagram"
+   }
+  },
+  {
+   "text": "Draw a ray diagram to show the formation of an image by a concave lens when the object is placed at a finite distance from the lens. State the nature of the image.",
+   "tags": {
+    "chapter": "light",
+    "topic": "lenses",
+    "difficulty": "easy",
+    "type": "diagram"
+   }
+  },
+  {
+   "text": "Calculate the power of a concave lens of focal length 25 cm.",
+   "tags": {
+    "chapter": "light",
+    "topic": "lenses",
+    "difficulty": "easy",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "Two thin lenses of power +2 D and -0.5 D are placed in contact. Calculate the power and the focal length of the combination. Is the combination converging or diverging?",
+   "tags": {
+    "chapter": "light",
+    "topic": "lenses",
+    "difficulty": "medium",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "A convex lens forms a real image three times the size of the object on a screen placed 36 cm from the lens. Find the object distance and the focal length of the lens.",
+   "tags": {
+    "chapter": "light",
+    "topic": "lenses",
+    "difficulty": "medium",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "A concave lens has a focal length of 20 cm. A 5 cm tall object is placed 40 cm from the lens. Find the position and height of the image formed.",
+   "tags": {
+    "chapter": "light",
+    "topic": "lenses",
+    "difficulty": "hard",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "A convex lens is used as a magnifying glass. Where should the object be placed relative to the lens, and what is the nature of the image formed? Give a reason why this arrangement magnifies the object.",
+   "tags": {
+    "chapter": "light",
+    "topic": "lenses",
+    "difficulty": "medium",
+    "type": "application"
+   }
+  },
+  {
+   "text": "A student covers the upper half of a convex lens with black paper and forms an image of a candle on a screen. What changes, if any, will be observed in the image? Give a reason.",
+   "tags": {
+    "chapter": "light",
+    "topic": "lenses",
+    "difficulty": "medium",
+    "type": "conceptual"
+   }
+  },
+  {
+   "text": "If the upper half of a convex lens is blocked with an opaque sheet, will the image of an object still be formed? Explain how the image is affected.",
+   "tags": {
+    "chapter": "light",
+    "topic": "lenses",
+    "difficulty": "medium",
+    "type": "conceptual"
+   }
+  },
+  {
+   "text": "Half of a convex lens is covered with black paper. Describe and explain what happens to the position, completeness and brightness of the image of an object.",
+   "tags": {
+    "chapter": "light",
+    "topic": "lenses",
+    "difficulty": "medium",
+    "type": "conceptual"
+   }
+  },
+  {
+   "text": "A person with myopia is prescribed a lens of power -2.5 D. Find the focal length of the lens, state its type, and explain why this type of lens corrects the defect.",
+   "tags": {
+    "chapter": "light",
+    "topic": "lenses",
+    "difficulty": "medium",
+    "type": "application"
+   }
+  },
+  {
+   "text": "Using the lens formula, show that when an object is placed at 2F of a convex lens, the image formed is real, inverted, of the same size as the object, and also at 2F on the other side.",
+   "tags": {
+    "chapter": "light",
+    "topic": "lenses",
+    "difficulty": "hard",
+    "type": "reasoning"
+   }
+  },
+  {
+   "text": "A glass convex lens behaves as a diverging lens when immersed in a liquid of higher refractive index than glass. Explain why this happens.",
+   "tags": {
+    "chapter": "light",
+    "topic": "lenses",
+    "difficulty": "hard",
+    "type": "reasoning"
+   }
+  },
+  {
+   "text": "Define accommodation of the human eye.",
+   "tags": {
+    "chapter": "light",
+    "topic": "human eye",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "Name the part of the eye that controls the amount of light entering it. Explain how it does this in bright light and in dim light.",
+   "tags": {
+    "chapter": "light",
+    "topic": "human eye",
+    "difficulty": "easy",
+    "type": "conceptual"
+   }
+  },
+  {
+   "text": "Draw a neat labelled diagram of the human eye. Label the cornea, iris, pupil, eye lens, ciliary muscles, retina and optic nerve.",
+   "tags": {
+    "chapter": "light",
+    "topic": "human eye",
+    "difficulty": "medium",
+    "type": "diagram"
+   }
+  },
+  {
+   "text": "Where is the image formed in a normal human eye? State the nature of this image and name the part of the body that carries the signal to the brain.",
+   "tags": {
+    "chapter": "light",
+    "topic": "human eye",
+    "difficulty": "easy",
+    "type": "conceptual"
+   }
+  },
+  {
+   "text": "Explain how the ciliary muscles and the eye lens adjust when a person shifts their gaze from a distant tree to a book held in the hand. State what happens to the focal length of the lens.",
+   "tags": {
+    "chapter": "light",
+    "topic": "human eye",
+    "difficulty": "medium",
+    "type": "conceptual"
+   }
+  },
+  {
+   "text": "State the near point and far point of a normal human eye.",
+   "tags": {
+    "chapter": "light",
+    "topic": "human eye",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "A student cannot see the blackboard clearly from the last bench but can read a book comfortably. Name the defect and give two possible causes.",
+   "tags": {
+    "chapter": "light",
+    "topic": "human eye",
+    "difficulty": "medium",
+    "type": "conceptual"
+   }
+  },
+  {
+   "text": "Draw ray diagrams to show (a) how a myopic eye forms the image of a distant object and (b) how this defect is corrected using a suitable lens.",
+   "tags": {
+    "chapter": "light",
+    "topic": "human eye",
+    "difficulty": "medium",
+    "type": "diagram"
+   }
+  },
+  {
+   "text": "What is hypermetropia? State two causes of this defect and name the type of lens used to correct it.",
+   "tags": {
+    "chapter": "light",
+    "topic": "human eye",
+    "difficulty": "medium",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "A myopic person has a far point at 80 cm. Calculate the focal length and power of the lens needed so that the person can see distant objects clearly.",
+   "tags": {
+    "chapter": "light",
+    "topic": "human eye",
+    "difficulty": "medium",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "A hypermetropic person has a near point at 75 cm. Calculate the focal length and power of the lens needed so that the person can read a book placed at 25 cm.",
+   "tags": {
+    "chapter": "light",
+    "topic": "human eye",
+    "difficulty": "hard",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "Why can a normal eye not see objects clearly when they are placed much closer than 25 cm? Explain in terms of the eye lens.",
+   "tags": {
+    "chapter": "light",
+    "topic": "human eye",
+    "difficulty": "medium",
+    "type": "reasoning"
+   }
+  },
+  {
+   "text": "Why does a person with myopia see nearby objects clearly while distant objects appear blurred? Explain with reference to where the image forms.",
+   "tags": {
+    "chapter": "light",
+    "topic": "human eye",
+    "difficulty": "easy",
+    "type": "reasoning"
+   }
+  },
+  {
+   "text": "An optometrist prescribes a lens of power -2.5 D for a student. Identify the defect, name the type of lens, and find the student's far point, assuming the lens makes distant objects appear at the far point.",
+   "tags": {
+    "chapter": "light",
+    "topic": "human eye",
+    "difficulty": "medium",
+    "type": "application"
+   }
+  },
+  {
+   "text": "Most of the refraction of light entering the eye takes place at the cornea. Why, then, is the eye lens still essential for clear vision?",
+   "tags": {
+    "chapter": "light",
+    "topic": "human eye",
+    "difficulty": "hard",
+    "type": "reasoning"
+   }
+  },
+  {
+   "text": "Elderly people often find it difficult to see both near and distant objects clearly. Name this defect, state its cause, and explain how bifocal lenses help.",
+   "tags": {
+    "chapter": "light",
+    "topic": "human eye",
+    "difficulty": "medium",
+    "type": "application"
+   }
+  },
+  {
+   "text": "What is meant by the accommodation power of the eye?",
+   "tags": {
+    "chapter": "light",
+    "topic": "human eye",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "Explain the term 'accommodation' as used in connection with the human eye.",
+   "tags": {
+    "chapter": "light",
+    "topic": "human eye",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "The far point of a short-sighted person is 80 cm. What power of corrective lens should the person use to see distant objects clearly? Also find the focal length of the lens.",
+   "tags": {
+    "chapter": "light",
+    "topic": "human eye",
+    "difficulty": "medium",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "A person with myopia can see clearly only up to 80 cm. Find the focal length and power of the spectacle lens that will let the person see very distant objects clearly.",
+   "tags": {
+    "chapter": "light",
+    "topic": "human eye",
+    "difficulty": "medium",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "Define dispersion of light.",
+   "tags": {
+    "chapter": "light",
+    "topic": "dispersion and scattering",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "What is meant by the splitting of white light into its component colours? Name the phenomenon and state one device that can produce it.",
+   "tags": {
+    "chapter": "light",
+    "topic": "dispersion and scattering",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "Give the definition of dispersion of light and name the colours of the spectrum in order, starting from the one that bends least.",
+   "tags": {
+    "chapter": "light",
+    "topic": "dispersion and scattering",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "Draw a labelled ray diagram showing a narrow beam of white light passing through a glass prism and forming a spectrum on a screen. Label the incident ray, the angle of the prism, the red end, the violet end and the screen.",
+   "tags": {
+    "chapter": "light",
+    "topic": "dispersion and scattering",
+    "difficulty": "easy",
+    "type": "diagram"
+   }
+  },
+  {
+   "text": "Explain why violet light is deviated more than red light when white light passes through a glass prism.",
+   "tags": {
+    "chapter": "light",
+    "topic": "dispersion and scattering",
+    "difficulty": "medium",
+    "type": "conceptual"
+   }
+  },
+  {
+   "text": "Define the Tyndall effect and state two conditions necessary for it to be observed.",
+   "tags": {
+    "chapter": "light",
+    "topic": "dispersion and scattering",
+    "difficulty": "easy",
+    "type": "definition"
+   }
+  },
+  {
+   "text": "Why does the sky appear blue during the day? Explain with reference to the scattering of sunlight by air molecules.",
+   "tags": {
+    "chapter": "light",
+    "topic": "dispersion and scattering",
+    "difficulty": "medium",
+    "type": "conceptual"
+   }
+  },
+  {
+   "text": "What is the reason for the blue colour of the daytime sky? Explain how the wavelength of light affects the amount of scattering.",
+   "tags": {
+    "chapter": "light",
+    "topic": "dispersion and scattering",
+    "difficulty": "medium",
+    "type": "conceptual"
+   }
+  },
+  {
+   "text": "Sunlight is a mixture of colours, yet the sky looks blue and not white. Explain why, mentioning the role of the atmosphere.",
+   "tags": {
+    "chapter": "light",
+    "topic": "dispersion and scattering",
+    "difficulty": "medium",
+    "type": "conceptual"
+   }
+  },
+  {
+   "text": "Why does the Sun look red or orange at sunrise and sunset, but nearly white at noon? Explain using the path length of light through the atmosphere.",
+   "tags": {
+    "chapter": "light",
+    "topic": "dispersion and scattering",
+    "difficulty": "medium",
+    "type": "conceptual"
+   }
+  },
+  {
+   "text": "The refractive index of a glass for red light is 1.51 and for violet light is 1.53. Taking the speed of light in vacuum as 3 × 10^8 m/s, calculate the speed of each colour in the glass and state which travels slower.",
+   "tags": {
+    "chapter": "light",
+    "topic": "dispersion and scattering",
+    "difficulty": "medium",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "A ray of white light strikes a plane glass surface at an angle of incidence of 40°. The refractive index of the glass is 1.514 for red light and 1.532 for violet light. Calculate the angle of refraction for each colour and the angular separation between them.",
+   "tags": {
+    "chapter": "light",
+    "topic": "dispersion and scattering",
+    "difficulty": "hard",
+    "type": "numerical"
+   }
+  },
+  {
+   "text": "Describe, step by step, how a rainbow is formed by a raindrop. Mention refraction, dispersion and total internal reflection.",
+   "tags": {
+    "chapter": "light",
+    "topic": "dispersion and scattering",
+    "difficulty": "medium",
+    "type": "conceptual"
+   }
+  },
+  {
+   "text": "A rainbow is seen only when the Sun is behind the observer and rain is falling in front of them. Explain why, and state which colour appears at the top of the primary rainbow and why.",
+   "tags": {
+    "chapter": "light",
+    "topic": "dispersion and scattering",
+    "difficulty": "hard",
+    "type": "reasoning"
+   }
+  },
+  {
+   "text": "Danger signals and traffic stop lights are coloured red. Explain the scientific reason for this choice using the idea of scattering.",
+   "tags": {
+    "chapter": "light",
+    "topic": "dispersion and scattering",
+    "difficulty": "medium",
+    "type": "application"
+   }
+  },
+  {
+   "text": "Astronauts in space see the sky as black even when the Sun is shining. Explain why.",
+   "tags": {
+    "chapter": "light",
+    "topic": "dispersion and scattering",
+    "difficulty": "medium",
+    "type": "reasoning"
+   }
+  },
+  {
+   "text": "A beam of sunlight entering a dusty room through a small hole becomes visible as a bright streak. Name the phenomenon and explain why it is seen.",
+   "tags": {
+    "chapter": "light",
+    "topic": "dispersion and scattering",
+    "difficulty": "easy",
+    "type": "application"
+   }
+  },
+  {
+   "text": "A beam of light passing through a sugar solution is not visible from the side, but a beam passing through milk diluted in water is clearly visible. Explain the difference.",
+   "tags": {
+    "chapter": "light",
+    "topic": "dispersion and scattering",
+    "difficulty": "medium",
+    "type": "reasoning"
+   }
+  },
+  {
+   "text": "In Newton's experiment, a second identical prism is placed in an inverted position next to the first prism, and white light emerges from it. Explain why the spectrum recombines to give white light and what this shows about the prism's role in dispersion.",
+   "tags": {
+    "chapter": "light",
+    "topic": "dispersion and scattering",
+    "difficulty": "hard",
+    "type": "reasoning"
+   }
+  },
+  {
+   "text": "Clouds appear white even though air molecules scatter blue light more strongly. Explain this by comparing the size of water droplets in clouds with the wavelength of visible light.",
+   "tags": {
+    "chapter": "light",
+    "topic": "dispersion and scattering",
+    "difficulty": "hard",
+    "type": "reasoning"
+   }
+  }
+ ]
+}
