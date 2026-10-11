@@ -1,0 +1,482 @@
+[
+  {
+    "id": "CALIB_01",
+    "q1": "What is reflection of light?",
+    "q2": "What is reflection of light?",
+    "expected": "Exact duplicate",
+    "category": "exact_identity",
+    "topic": "Optics"
+  },
+  {
+    "id": "CALIB_02",
+    "q1": "Define the reflection of light.",
+    "q2": "Define the reflection of light?",
+    "expected": "Exact duplicate",
+    "category": "exact_punctuation",
+    "topic": "Optics"
+  },
+  {
+    "id": "CALIB_03",
+    "q1": "The angle of incidence is 30 degrees.",
+    "q2": "The angle of incidence is 30°.",
+    "expected": "Exact duplicate",
+    "category": "exact_symbol_normalization",
+    "topic": "Optics"
+  },
+  {
+    "id": "CALIB_04",
+    "q1": "What is the SI unit of force?",
+    "q2": "What is the si unit of force",
+    "expected": "Exact duplicate",
+    "category": "exact_case_and_punctuation",
+    "topic": "Mechanics"
+  },
+  {
+    "id": "CALIB_05",
+    "q1": "Define the reflection of light.",
+    "q2": "What is reflection of light?",
+    "expected": "Semantic duplicate",
+    "category": "paraphrase_definition",
+    "topic": "Optics"
+  },
+  {
+    "id": "CALIB_06",
+    "q1": "What do you understand by the reflection of light?",
+    "q2": "What is reflection of light?",
+    "expected": "Semantic duplicate",
+    "category": "paraphrase_phrasing",
+    "topic": "Optics"
+  },
+  {
+    "id": "CALIB_07",
+    "q1": "Explain the meaning of light reflection.",
+    "q2": "What is reflection of light?",
+    "expected": "Semantic duplicate",
+    "category": "paraphrase_synonym",
+    "topic": "Optics"
+  },
+  {
+    "id": "CALIB_08",
+    "q1": "State Newton's first law of motion.",
+    "q2": "What is Newton's first law of motion?",
+    "expected": "Semantic duplicate",
+    "category": "paraphrase_imperative_vs_interrogative",
+    "topic": "Mechanics"
+  },
+  {
+    "id": "CALIB_09",
+    "q1": "What is the function of mitochondria in a cell?",
+    "q2": "Explain the role of mitochondria in cells.",
+    "expected": "Semantic duplicate",
+    "category": "paraphrase_biology",
+    "topic": "Biology"
+  },
+  {
+    "id": "CALIB_10",
+    "q1": "How do plants synthesize glucose during photosynthesis?",
+    "q2": "Explain how plants produce glucose through photosynthesis.",
+    "expected": "Semantic duplicate",
+    "category": "paraphrase_biology",
+    "topic": "Biology"
+  },
+  {
+    "id": "CALIB_11",
+    "q1": "Define an exothermic reaction.",
+    "q2": "What is meant by an exothermic reaction?",
+    "expected": "Semantic duplicate",
+    "category": "paraphrase_chemistry",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "CALIB_12",
+    "q1": "Name the SI unit of electric resistance.",
+    "q2": "What is the SI unit for electric resistance?",
+    "expected": "Semantic duplicate",
+    "category": "paraphrase_physics",
+    "topic": "Electricity"
+  },
+  {
+    "id": "CALIB_13",
+    "q1": "State the law of conservation of mass.",
+    "q2": "What is the law of conservation of mass?",
+    "expected": "Semantic duplicate",
+    "category": "paraphrase_chemistry",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "CALIB_14",
+    "q1": "What is Ohm's law?",
+    "q2": "State Ohm's law.",
+    "expected": "Semantic duplicate",
+    "category": "paraphrase_physics",
+    "topic": "Electricity"
+  },
+  {
+    "id": "CALIB_15",
+    "q1": "What is a concave mirror?",
+    "q2": "What is a convex mirror?",
+    "expected": "Different question",
+    "category": "hard_negative_antonym",
+    "topic": "Optics"
+  },
+  {
+    "id": "CALIB_16",
+    "q1": "The angle of incidence is 30°. What is the angle of reflection?",
+    "q2": "The angle of incidence is 55°. What is the angle of reflection?",
+    "expected": "Different question",
+    "category": "hard_negative_numeric_given",
+    "topic": "Optics"
+  },
+  {
+    "id": "CALIB_17",
+    "q1": "The angle of incidence is 40°. Find the angle of reflection.",
+    "q2": "The angle of incidence is 60°. Find the angle of reflection.",
+    "expected": "Different question",
+    "category": "hard_negative_numeric_given",
+    "topic": "Optics"
+  },
+  {
+    "id": "CALIB_18",
+    "q1": "State Newton's first law of motion.",
+    "q2": "State Newton's second law of motion.",
+    "expected": "Different question",
+    "category": "hard_negative_ordinal_law",
+    "topic": "Mechanics"
+  },
+  {
+    "id": "CALIB_19",
+    "q1": "State Newton's second law of motion.",
+    "q2": "State Newton's third law of motion.",
+    "expected": "Different question",
+    "category": "hard_negative_ordinal_law",
+    "topic": "Mechanics"
+  },
+  {
+    "id": "CALIB_20",
+    "q1": "What is kinetic energy?",
+    "q2": "What is potential energy?",
+    "expected": "Different question",
+    "category": "hard_negative_energy_types",
+    "topic": "Mechanics"
+  },
+  {
+    "id": "CALIB_21",
+    "q1": "Define an acid according to Arrhenius theory.",
+    "q2": "Define a base according to Arrhenius theory.",
+    "expected": "Different question",
+    "category": "hard_negative_chemistry_counterpart",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "CALIB_22",
+    "q1": "What is the function of the nucleus in an animal cell?",
+    "q2": "What is the function of the cell membrane in an animal cell?",
+    "expected": "Different question",
+    "category": "hard_negative_organelle_counterpart",
+    "topic": "Biology"
+  },
+  {
+    "id": "CALIB_23",
+    "q1": "What is the difference between regular and diffuse reflection?",
+    "q2": "What is reflection of light?",
+    "expected": "Different question",
+    "category": "different_intent_contrast_vs_definition",
+    "topic": "Optics"
+  },
+  {
+    "id": "CALIB_24",
+    "q1": "State the laws of reflection of light.",
+    "q2": "What is reflection of light?",
+    "expected": "Different question",
+    "category": "different_intent_laws_vs_definition",
+    "topic": "Optics"
+  },
+  {
+    "id": "CALIB_25",
+    "q1": "What is the angle of reflection?",
+    "q2": "What is reflection of light?",
+    "expected": "Different question",
+    "category": "different_entity_subconcept",
+    "topic": "Optics"
+  },
+  {
+    "id": "CALIB_26",
+    "q1": "Define speed.",
+    "q2": "Define velocity.",
+    "expected": "Different question",
+    "category": "hard_negative_scalar_vs_vector",
+    "topic": "Mechanics"
+  },
+  {
+    "id": "CALIB_27",
+    "q1": "What is the speed of light in vacuum?",
+    "q2": "What is the speed of sound in air?",
+    "expected": "Different question",
+    "category": "hard_negative_medium_counterpart",
+    "topic": "Physics"
+  },
+  {
+    "id": "CALIB_28",
+    "q1": "What is an endothermic reaction?",
+    "q2": "What is an exothermic reaction?",
+    "expected": "Different question",
+    "category": "hard_negative_antonym",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "CALIB_29",
+    "q1": "Calculate the work done when a force of 10 N moves an object 5 m.",
+    "q2": "Calculate the work done when a force of 20 N moves an object 8 m.",
+    "expected": "Different question",
+    "category": "hard_negative_numeric_problem",
+    "topic": "Mechanics"
+  },
+  {
+    "id": "CALIB_30",
+    "q1": "What is aerobic respiration?",
+    "q2": "What is anaerobic respiration?",
+    "expected": "Different question",
+    "category": "hard_negative_antonym",
+    "topic": "Biology"
+  },
+  {
+    "id": "CALIB_31",
+    "q1": "What is reflection?",
+    "q2": "What is reflection of light?",
+    "expected": "Potentially ambiguous; review context",
+    "category": "scope_omission_physical_domain",
+    "topic": "Optics"
+  },
+  {
+    "id": "CALIB_32",
+    "q1": "Explain refraction.",
+    "q2": "Explain the refraction of light through a glass prism.",
+    "expected": "Potentially ambiguous; review context",
+    "category": "scope_omission_specific_medium",
+    "topic": "Optics"
+  },
+  {
+    "id": "CALIB_33",
+    "q1": "Define dispersion.",
+    "q2": "Define the dispersion of white light by a glass prism.",
+    "expected": "Potentially ambiguous; review context",
+    "category": "scope_omission",
+    "topic": "Optics"
+  },
+  {
+    "id": "CALIB_34",
+    "q1": "What is energy?",
+    "q2": "What is thermal energy?",
+    "expected": "Potentially ambiguous; review context",
+    "category": "scope_broad_vs_specific",
+    "topic": "Physics"
+  },
+  {
+    "id": "CALIB_35",
+    "q1": "What is wave diffraction?",
+    "q2": "What is diffraction?",
+    "expected": "Potentially ambiguous; review context",
+    "category": "scope_omission",
+    "topic": "Physics"
+  },
+  {
+    "id": "CALIB_36",
+    "q1": "How does light reflect off smooth surfaces?",
+    "q2": "Describe how specular reflection occurs on smooth surfaces.",
+    "expected": "Semantic duplicate",
+    "category": "paraphrase_advanced_vocabulary",
+    "topic": "Optics"
+  },
+  {
+    "id": "CALIB_37",
+    "q1": "Why is the sky blue during the day?",
+    "q2": "Explain why the sky appears blue in daytime.",
+    "expected": "Semantic duplicate",
+    "category": "paraphrase_natural_phenomenon",
+    "topic": "Optics"
+  },
+  {
+    "id": "CALIB_38",
+    "q1": "What happens when an acid reacts with a metal?",
+    "q2": "Describe the chemical reaction between an acid and a metal.",
+    "expected": "Semantic duplicate",
+    "category": "paraphrase_reaction",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "CALIB_39",
+    "q1": "Give two examples of renewable energy sources.",
+    "q2": "List two examples of renewable sources of energy.",
+    "expected": "Semantic duplicate",
+    "category": "paraphrase_examples",
+    "topic": "Environmental Science"
+  },
+  {
+    "id": "CALIB_40",
+    "q1": "State Archimedes' principle.",
+    "q2": "What does Archimedes' principle state?",
+    "expected": "Semantic duplicate",
+    "category": "paraphrase_physics_principle",
+    "topic": "Fluid Mechanics"
+  },
+  {
+    "id": "CALIB_41",
+    "q1": "Why does a pencil appear bent in a glass of water?",
+    "q2": "Explain why a pencil looks bent when immersed in water.",
+    "expected": "Semantic duplicate",
+    "category": "paraphrase_refraction_phenomenon",
+    "topic": "Optics"
+  },
+  {
+    "id": "CALIB_42",
+    "q1": "What is the difference between mitosis and meiosis?",
+    "q2": "Compare mitosis with meiosis.",
+    "expected": "Semantic duplicate",
+    "category": "paraphrase_biology_comparison",
+    "topic": "Cell Biology"
+  },
+  {
+    "id": "CALIB_43",
+    "q1": "What is the valency of carbon?",
+    "q2": "State the valency of a carbon atom.",
+    "expected": "Semantic duplicate",
+    "category": "paraphrase_chemistry",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "CALIB_44",
+    "q1": "Define electric potential difference.",
+    "q2": "What is electric potential difference (voltage)?",
+    "expected": "Semantic duplicate",
+    "category": "paraphrase_parenthetical_synonym",
+    "topic": "Electricity"
+  },
+  {
+    "id": "CALIB_45",
+    "q1": "Why do stars twinkle at night?",
+    "q2": "What causes the apparent twinkling of stars?",
+    "expected": "Semantic duplicate",
+    "category": "paraphrase_optics",
+    "topic": "Optics"
+  },
+  {
+    "id": "CALIB_46",
+    "q1": "What is total internal reflection?",
+    "q2": "Define total internal reflection.",
+    "expected": "Semantic duplicate",
+    "category": "paraphrase_optics",
+    "topic": "Optics"
+  },
+  {
+    "id": "CALIB_47",
+    "q1": "What is total internal reflection?",
+    "q2": "What is the critical angle in optics?",
+    "expected": "Different question",
+    "category": "related_concept_distinct_target",
+    "topic": "Optics"
+  },
+  {
+    "id": "CALIB_48",
+    "q1": "What is the focal length of a concave mirror?",
+    "q2": "Define the center of curvature of a concave mirror.",
+    "expected": "Different question",
+    "category": "different_geometric_parameters",
+    "topic": "Optics"
+  },
+  {
+    "id": "CALIB_49",
+    "q1": "What is the formula for calculating kinetic energy?",
+    "q2": "How is kinetic energy calculated (formula)?",
+    "expected": "Semantic duplicate",
+    "category": "paraphrase_formula",
+    "topic": "Mechanics"
+  },
+  {
+    "id": "CALIB_50",
+    "q1": "What is the formula for kinetic energy?",
+    "q2": "What is the formula for gravitational potential energy?",
+    "expected": "Different question",
+    "category": "hard_negative_formula_counterpart",
+    "topic": "Mechanics"
+  },
+  {
+    "id": "CALIB_51",
+    "q1": "Why does an iron nail sink in water while a ship floats?",
+    "q2": "Explain why an iron nail sinks in water whereas a large ship floats.",
+    "expected": "Semantic duplicate",
+    "category": "paraphrase_density_buoyancy",
+    "topic": "Fluid Mechanics"
+  },
+  {
+    "id": "CALIB_52",
+    "q1": "What is Pascal's law?",
+    "q2": "State Pascal's principle for transmission of fluid pressure.",
+    "expected": "Semantic duplicate",
+    "category": "paraphrase_physics",
+    "topic": "Fluid Mechanics"
+  },
+  {
+    "id": "CALIB_53",
+    "q1": "What is the difference between speed and velocity?",
+    "q2": "How does speed differ from velocity?",
+    "expected": "Semantic duplicate",
+    "category": "paraphrase_contrast",
+    "topic": "Mechanics"
+  },
+  {
+    "id": "CALIB_54",
+    "q1": "What is the pH value of pure water at 25°C?",
+    "q2": "What is the pH of pure water at 25 degrees Celsius?",
+    "expected": "Exact duplicate",
+    "category": "exact_temperature_and_symbol",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "CALIB_55",
+    "q1": "State the law of conservation of energy.",
+    "q2": "What is the principle of conservation of energy?",
+    "expected": "Semantic duplicate",
+    "category": "paraphrase_synonym_principle_law",
+    "topic": "Physics"
+  },
+  {
+    "id": "CALIB_56",
+    "q1": "Define inertia.",
+    "q2": "What do you mean by inertia of a body?",
+    "expected": "Semantic duplicate",
+    "category": "paraphrase_mechanics",
+    "topic": "Mechanics"
+  },
+  {
+    "id": "CALIB_57",
+    "q1": "What is the atomic number of oxygen?",
+    "q2": "What is the mass number of oxygen?",
+    "expected": "Different question",
+    "category": "hard_negative_atomic_properties",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "CALIB_58",
+    "q1": "What is an isotope?",
+    "q2": "What is an isobar?",
+    "expected": "Different question",
+    "category": "hard_negative_nuclear_counterparts",
+    "topic": "Chemistry"
+  },
+  {
+    "id": "CALIB_59",
+    "q1": "What is photosynthesis?",
+    "q2": "What is cellular respiration?",
+    "expected": "Different question",
+    "category": "hard_negative_biological_opposites",
+    "topic": "Biology"
+  },
+  {
+    "id": "CALIB_60",
+    "q1": "Define momentum.",
+    "q2": "What is linear momentum of an object?",
+    "expected": "Semantic duplicate",
+    "category": "paraphrase_mechanics",
+    "topic": "Mechanics"
+  }
+]

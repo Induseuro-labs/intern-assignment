@@ -1,0 +1,705 @@
+/* ==========================================================================
+   Induseuro-Labs Tactile Skeuomorphic & Claymorphic Engineering Console
+   Strict Constraints:
+   - ZERO purple gradients (Strictly titanium gray, ceramic off-white, cobalt blue #2563eb, emerald #059669)
+   - ZERO pill-shaped buttons (Strict 8px to 10px beveled keycaps)
+   - ZERO emoji glyphs (Clean typography, LED indicators, and SVG icons)
+   - ZERO em dashes (No em-dash or double dash)
+   - ZERO fake reviews, fake metrics, or fake counters
+   - ZERO vague hero slogans or AI slop
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* Ceramic Clay Palette */
+  --chassis-bg: #e5ebf3;
+  --surface-clay: #ecf2f9;
+  --surface-inset: #dce5ef;
+  --surface-white: #ffffff;
+  --shadow-dark: #b8c6d6;
+  --shadow-light: #ffffff;
+  --border-soft: rgba(255, 255, 255, 0.95);
+  --border-rim: #c5d3e2;
+
+  /* Ink Hierarchy */
+  --ink-primary: #0f172a;
+  --ink-secondary: #334155;
+  --ink-muted: #64748b;
+
+  /* Industrial Colors (Zero Purple) */
+  --accent-cobalt: #2563eb;
+  --accent-cobalt-hover: #1d4ed8;
+  --accent-cobalt-dark: #1e40af;
+  
+  --status-green: #059669;
+  --status-green-glow: rgba(5, 150, 105, 0.45);
+  --status-amber: #d97706;
+  --status-amber-glow: rgba(217, 119, 6, 0.45);
+  --status-red: #dc2626;
+  --status-red-glow: rgba(220, 38, 38, 0.45);
+  --status-blue: #0284c7;
+
+  /* Mechanical Geometry (No Pills) */
+  --radius-key: 8px;
+  --radius-well: 10px;
+  --radius-chassis: 16px;
+
+  --font-stack: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-stack);
+  background-color: var(--chassis-bg);
+  color: var(--ink-primary);
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --------------------------------------------------------------------------
+   Physical Hardware Accents (Skeuomorphic Screws & LEDs)
+   -------------------------------------------------------------------------- */
+
+.chassis-screw {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
+  box-shadow: 
+    inset 1px 1px 1.5px rgba(255, 255, 255, 0.9),
+    1px 1px 2px rgba(0, 0, 0, 0.25);
+  position: relative;
+  display: inline-block;
+}
+
+.chassis-screw::after {
+  content: '';
+  position: absolute;
+  top: 4.5px;
+  left: 2px;
+  width: 7px;
+  height: 1.5px;
+  background: #475569;
+  box-shadow: 0 0.5px 0 rgba(255, 255, 255, 0.6);
+  transform: rotate(45deg);
+}
+
+.chassis-screw.alt::after {
+  transform: rotate(135deg);
+}
+
+/* Real Illuminated LED Bulbs */
+.led-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
+  position: relative;
+}
+
+.led-green {
+  background: #10b981;
+  box-shadow: 
+    inset -1px -1px 2px rgba(0, 0, 0, 0.35),
+    0 0 7px var(--status-green-glow);
+}
+
+.led-amber {
+  background: #f59e0b;
+  box-shadow: 
+    inset -1px -1px 2px rgba(0, 0, 0, 0.35),
+    0 0 7px var(--status-amber-glow);
+}
+
+.led-red {
+  background: #ef4444;
+  box-shadow: 
+    inset -1px -1px 2px rgba(0, 0, 0, 0.35),
+    0 0 7px var(--status-red-glow);
+}
+
+.led-blue {
+  background: #3b82f6;
+  box-shadow: 
+    inset -1px -1px 2px rgba(0, 0, 0, 0.35),
+    0 0 7px rgba(59, 130, 246, 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   Claymorphic & Skeuomorphic Primitives
+   -------------------------------------------------------------------------- */
+
+/* Extruded Clay Enclosure */
+.clay-card {
+  background: var(--surface-clay);
+  border-radius: var(--radius-chassis);
+  padding: 24px;
+  border: 1px solid var(--border-soft);
+  box-shadow:
+    10px 10px 22px var(--shadow-dark),
+    -10px -10px 22px var(--shadow-light),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.95);
+  margin-bottom: 24px;
+  position: relative;
+}
+
+/* Debossed Inset Well / Recessed Screen */
+.clay-well {
+  background: var(--surface-inset);
+  border-radius: var(--radius-well);
+  padding: 16px;
+  border: 1px solid var(--border-rim);
+  box-shadow:
+    inset 4px 4px 8px var(--shadow-dark),
+    inset -4px -4px 8px var(--shadow-light);
+}
+
+/* Tactile Push Keycaps (Strict Rectangular, NO PILLS) */
+.btn-clay {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(180deg, #ffffff 0%, #e2eaf2 100%);
+  color: var(--ink-primary);
+  font-family: var(--font-stack);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: var(--radius-key);
+  border: 1px solid #cbd5e1;
+  cursor: pointer;
+  box-shadow:
+    3px 3px 7px var(--shadow-dark),
+    -3px -3px 7px var(--shadow-light),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.1s ease;
+  user-select: none;
+}
+
+.btn-clay:hover {
+  background: linear-gradient(180deg, #ffffff 0%, #ebf1f8 100%);
+  box-shadow:
+    2px 2px 5px var(--shadow-dark),
+    -2px -2px 5px var(--shadow-light);
+}
+
+.btn-clay:active {
+  transform: translateY(2px);
+  box-shadow:
+    inset 2px 2px 5px #b0bece,
+    inset -1px -1px 3px #ffffff;
+}
+
+/* Primary Keycap (Cobalt Precision, NO PURPLE) */
+.btn-primary {
+  background: linear-gradient(180deg, #3b82f6 0%, #1d4ed8 100%);
+  color: #ffffff;
+  border: 1px solid #1e40af;
+  box-shadow:
+    3px 3px 8px var(--shadow-dark),
+    -3px -3px 8px var(--shadow-light),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(180deg, #4f90f8 0%, #2563eb 100%);
+}
+
+.btn-primary:active {
+  transform: translateY(2px);
+  box-shadow:
+    inset 2px 2px 6px #172554,
+    inset -1px -1px 3px rgba(255, 255, 255, 0.2);
+}
+
+/* Debossed Inset Form Controls */
+.input-clay,
+.select-clay,
+.textarea-clay {
+  width: 100%;
+  font-family: var(--font-stack);
+  font-size: 0.9rem;
+  color: var(--ink-primary);
+  background: var(--surface-inset);
+  border: 1px solid #cad6e2;
+  border-radius: var(--radius-key);
+  padding: 10px 14px;
+  box-shadow:
+    inset 3px 3px 6px var(--shadow-dark),
+    inset -3px -3px 6px var(--shadow-light);
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.input-clay:focus,
+.select-clay:focus,
+.textarea-clay:focus {
+  border-color: var(--accent-cobalt);
+  box-shadow:
+    inset 3px 3px 6px var(--shadow-dark),
+    inset -3px -3px 6px var(--shadow-light),
+    0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* --------------------------------------------------------------------------
+   Layout Hierarchy
+   -------------------------------------------------------------------------- */
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Tactile Sidebar Chassis */
+.app-sidebar {
+  width: 300px;
+  background: #e2eaf3;
+  border-right: 1px solid #cad6e2;
+  box-shadow: 6px 0 18px rgba(180, 195, 210, 0.35);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.brand-badge {
+  background: var(--surface-clay);
+  border-radius: var(--radius-well);
+  padding: 18px;
+  border: 1px solid var(--border-soft);
+  box-shadow:
+    5px 5px 12px var(--shadow-dark),
+    -5px -5px 12px var(--shadow-light);
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.brand-badge .corner-screw {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.brand-badge h2 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--ink-primary);
+  letter-spacing: -0.01em;
+}
+
+.brand-badge p {
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-muted);
+  font-weight: 600;
+  margin-top: 3px;
+}
+
+/* Rocker Navigation Keys */
+.nav-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: auto;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  background: var(--surface-clay);
+  color: var(--ink-secondary);
+  font-family: var(--font-stack);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 13px 16px;
+  border-radius: var(--radius-key);
+  border: 1px solid #cbd5e1;
+  box-shadow:
+    3px 3px 8px var(--shadow-dark),
+    -3px -3px 8px var(--shadow-light);
+  cursor: pointer;
+  transition: all 0.12s ease;
+  user-select: none;
+}
+
+.nav-item:hover {
+  color: var(--ink-primary);
+  background: #f4f8fc;
+}
+
+.nav-item.active {
+  background: var(--surface-inset);
+  color: var(--accent-cobalt);
+  box-shadow:
+    inset 3px 3px 7px var(--shadow-dark),
+    inset -3px -3px 7px var(--shadow-light);
+  border-color: var(--accent-cobalt);
+  font-weight: 700;
+}
+
+/* System Diagnostics Inset */
+.status-panel {
+  margin-top: 24px;
+  font-size: 0.78rem;
+  line-height: 1.65;
+  color: var(--ink-secondary);
+}
+
+/* Main Console Surface */
+.app-main {
+  flex: 1;
+  padding: 36px 44px;
+  overflow-y: auto;
+}
+
+/* Top Banner Header */
+.header-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header-banner h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--ink-primary);
+  letter-spacing: -0.02em;
+}
+
+.header-banner p {
+  font-size: 0.92rem;
+  color: var(--ink-muted);
+  margin-top: 4px;
+}
+
+/* Tactile Sub-Tabs */
+.tab-strip {
+  display: flex;
+  gap: 8px;
+  border-bottom: 2px solid #cad6e2;
+  margin-bottom: 28px;
+  padding-bottom: 4px;
+}
+
+.tab-btn {
+  background: var(--surface-inset);
+  border: 1px solid #cad6e2;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  padding: 11px 22px;
+  font-family: var(--font-stack);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+  cursor: pointer;
+  box-shadow: 2px -2px 5px rgba(190, 205, 220, 0.35);
+  transition: all 0.12s ease;
+}
+
+.tab-btn:hover {
+  color: var(--ink-primary);
+  background: #e9f0f7;
+}
+
+.tab-btn.active {
+  background: var(--surface-clay);
+  color: var(--ink-primary);
+  border-top: 3px solid var(--accent-cobalt);
+  box-shadow:
+    3px -3px 7px var(--shadow-dark),
+    -3px -3px 7px var(--shadow-light);
+  font-weight: 700;
+}
+
+/* Metrics Gauge Strip */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.metric-unit {
+  background: var(--surface-clay);
+  border-radius: var(--radius-well);
+  padding: 18px 22px;
+  border: 1px solid var(--border-soft);
+  box-shadow:
+    6px 6px 14px var(--shadow-dark),
+    -6px -6px 14px var(--shadow-light),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.95);
+  position: relative;
+}
+
+.metric-label {
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-muted);
+}
+
+.metric-value {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--ink-primary);
+  margin-top: 4px;
+  font-feature-settings: "tnum";
+}
+
+/* Grid for Catalog Assets */
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 24px;
+}
+
+.asset-card {
+  background: var(--surface-clay);
+  border-radius: var(--radius-well);
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  box-shadow:
+    7px 7px 16px var(--shadow-dark),
+    -7px -7px 16px var(--shadow-light);
+  display: flex;
+  flex-direction: column;
+}
+
+.asset-preview {
+  width: 100%;
+  height: 200px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #cad6e2;
+  overflow: hidden;
+}
+
+.asset-preview img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.asset-details {
+  padding: 18px;
+}
+
+.asset-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Tactile Status Badges (Strict Rectangular, NO PILLS) */
+.badge-status {
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 4px 9px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: inline-block;
+}
+
+.badge-detected {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.badge-manual {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+
+.badge-composite {
+  background: #e0f2fe;
+  color: #075985;
+  border: 1px solid #bae6fd;
+}
+
+.badge-empty {
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+}
+
+/* Interactive Canvas Viewer */
+.canvas-frame {
+  background: #ffffff;
+  border-radius: var(--radius-well);
+  padding: 12px;
+  box-shadow:
+    inset 4px 4px 9px var(--shadow-dark),
+    inset -4px -4px 9px var(--shadow-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 380px;
+  position: relative;
+  overflow: hidden;
+}
+
+.canvas-frame canvas {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+/* Analog Style Gauge */
+.gauge-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px;
+}
+
+.gauge-meter {
+  position: relative;
+  width: 230px;
+  height: 115px;
+  border-radius: 115px 115px 0 0;
+  background: linear-gradient(90deg, #059669 0%, #d97706 55%, #dc2626 100%);
+  overflow: hidden;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.gauge-center {
+  position: absolute;
+  bottom: 0;
+  left: 24px;
+  right: 24px;
+  height: 91px;
+  background: var(--surface-clay);
+  border-radius: 91px 91px 0 0;
+  box-shadow:
+    4px 4px 9px var(--shadow-dark),
+    -4px -4px 9px var(--shadow-light);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.gauge-needle {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  height: 100px;
+  background: #0f172a;
+  transform-origin: bottom center;
+  transform: rotate(-90deg);
+  transition: transform 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.gauge-val-text {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--ink-primary);
+}
+
+/* Data Tables */
+.table-clay {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.table-clay th {
+  text-align: left;
+  padding: 13px 15px;
+  background: var(--surface-inset);
+  color: var(--ink-muted);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.76rem;
+  border-bottom: 2px solid #cad6e2;
+}
+
+.table-clay td {
+  padding: 13px 15px;
+  border-bottom: 1px solid #d5dfea;
+  color: var(--ink-secondary);
+}
+
+.table-clay tr:hover td {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Modal Dialog */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.modal-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-box {
+  width: 90%;
+  max-width: 680px;
+  max-height: 85vh;
+  overflow-y: auto;
+  background: var(--surface-clay);
+  border-radius: var(--radius-chassis);
+  padding: 34px;
+  border: 1px solid var(--border-soft);
+  box-shadow:
+    16px 16px 36px rgba(0, 0, 0, 0.3),
+    -12px -12px 28px rgba(255, 255, 255, 0.95);
+  position: relative;
+}
+
+/* Two column layout */
+.split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 960px) {
+  .app-container {
+    flex-direction: column;
+  }
+  .app-sidebar {
+    width: 100%;
+  }
+  .split-grid {
+    grid-template-columns: 1fr;
+  }
+}

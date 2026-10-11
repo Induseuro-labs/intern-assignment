@@ -1,0 +1,128 @@
+[
+  {
+    "id": "Q1",
+    "text": "What is reflection of light?",
+    "concept": "reflection of light",
+    "tags": {
+      "difficulty": "easy",
+      "bloom": "remember",
+      "source": "textbook_ch1"
+    },
+    "source": "seed",
+    "created_at": "2026-10-11T06:06:46.450331+00:00",
+    "normalized_text": "what is reflection of light"
+  },
+  {
+    "id": "Q2",
+    "text": "Define the reflection of light.",
+    "concept": "reflection of light",
+    "tags": {
+      "difficulty": "easy",
+      "bloom": "understand",
+      "author": "Dr. Smith"
+    },
+    "source": "seed",
+    "created_at": "2026-10-11T06:06:46.452330+00:00",
+    "normalized_text": "define the reflection of light"
+  },
+  {
+    "id": "Q3",
+    "text": "What do you understand by the reflection of light?",
+    "concept": "reflection of light",
+    "tags": {
+      "difficulty": "medium",
+      "exam": "midterm"
+    },
+    "source": "seed",
+    "created_at": "2026-10-11T06:06:46.452330+00:00",
+    "normalized_text": "what do you understand by the reflection of light"
+  },
+  {
+    "id": "Q4",
+    "text": "Explain the meaning of light reflection.",
+    "concept": "reflection of light",
+    "tags": {
+      "difficulty": "easy",
+      "bloom": "explain",
+      "curriculum": "CBSE"
+    },
+    "source": "seed",
+    "created_at": "2026-10-11T06:06:46.453326+00:00",
+    "normalized_text": "explain the meaning of light reflection"
+  },
+  {
+    "id": "Q5",
+    "text": "State the laws of reflection of light.",
+    "concept": "reflection of light",
+    "tags": {
+      "difficulty": "medium",
+      "bloom": "state",
+      "importance": "high"
+    },
+    "source": "seed",
+    "created_at": "2026-10-11T06:06:46.453326+00:00",
+    "normalized_text": "state the laws of reflection of light"
+  },
+  {
+    "id": "Q6",
+    "text": "What is the angle of reflection?",
+    "concept": "reflection of light",
+    "tags": {
+      "difficulty": "easy",
+      "concept_unit": "angles"
+    },
+    "source": "seed",
+    "created_at": "2026-10-11T06:06:46.453326+00:00",
+    "normalized_text": "what is the angle of reflection"
+  },
+  {
+    "id": "Q7",
+    "text": "The angle of incidence is 30\u00b0. What is the angle of reflection?",
+    "concept": "reflection of light",
+    "tags": {
+      "difficulty": "hard",
+      "problem_type": "numerical",
+      "marks": 2
+    },
+    "source": "seed",
+    "created_at": "2026-10-11T06:06:46.453326+00:00",
+    "normalized_text": "the angle of incidence is 30\u00b0 what is the angle of reflection"
+  },
+  {
+    "id": "Q8",
+    "text": "What is reflection?",
+    "concept": "reflection of light",
+    "tags": {
+      "difficulty": "introductory",
+      "scope": "general_physics"
+    },
+    "source": "seed",
+    "created_at": "2026-10-11T06:06:46.453326+00:00",
+    "normalized_text": "what is reflection"
+  },
+  {
+    "id": "Q9",
+    "text": "What is the difference between regular and diffuse reflection?",
+    "concept": "reflection of light",
+    "tags": {
+      "difficulty": "medium",
+      "bloom": "compare"
+    },
+    "source": "seed",
+    "created_at": "2026-10-11T06:06:46.453326+00:00",
+    "normalized_text": "what is the difference between regular and diffuse reflection"
+  },
+  {
+    "id": "Q10",
+    "text": "Define the reflection of light.",
+    "concept": "reflection of light",
+    "tags": {
+      "difficulty": "easy",
+      "author": "Prof. Rao",
+      "exam": "final_2024"
+    },
+    "source": "seed",
+    "created_at": "2026-10-11T06:06:46.453326+00:00",
+    "normalized_text": "define the reflection of light"
+  }
+]

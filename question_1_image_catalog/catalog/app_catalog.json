@@ -1,0 +1,646 @@
+[
+  {
+    "id": "apple",
+    "image_name": "apple.png",
+    "file_path": "D:\\~Projects\\Induseuro-labs-intern-assignment\\question_1_image_catalog\\data\\apple.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "file_size_bytes": 3123,
+    "created_at": "2026-10-11T06:01:29.262081+00:00",
+    "updated_at": "2026-10-11T06:01:29.262081+00:00",
+    "detection_status": "completed",
+    "has_manual_corrections": false,
+    "objects": [
+      {
+        "id": "obj_d2936ae0",
+        "auto_label": "apple",
+        "auto_confidence": 0.96,
+        "auto_bbox": {
+          "x": 140,
+          "y": 120,
+          "width": 221,
+          "height": 281
+        },
+        "auto_colors": [
+          "red"
+        ],
+        "detector_model": "FruitColorSegmentation_v1",
+        "detected_at": "2026-10-11T06:01:29.256080+00:00",
+        "user_label": null,
+        "user_confidence": null,
+        "user_bbox": null,
+        "user_colors": null,
+        "display_name": null,
+        "notes": null,
+        "is_manually_added": false,
+        "is_manually_edited": false,
+        "is_deleted": false,
+        "last_modified_at": null
+      }
+    ],
+    "is_composite": false,
+    "composite_metadata": null,
+    "tags": [],
+    "user_notes": null
+  },
+  {
+    "id": "orange",
+    "image_name": "orange.png",
+    "file_path": "D:\\~Projects\\Induseuro-labs-intern-assignment\\question_1_image_catalog\\data\\orange.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "file_size_bytes": 3109,
+    "created_at": "2026-10-11T06:01:29.298077+00:00",
+    "updated_at": "2026-10-11T06:01:29.298077+00:00",
+    "detection_status": "completed",
+    "has_manual_corrections": false,
+    "objects": [
+      {
+        "id": "obj_19b6a245",
+        "auto_label": "orange",
+        "auto_confidence": 0.96,
+        "auto_bbox": {
+          "x": 130,
+          "y": 102,
+          "width": 241,
+          "height": 269
+        },
+        "auto_colors": [
+          "orange"
+        ],
+        "detector_model": "FruitColorSegmentation_v1",
+        "detected_at": "2026-10-11T06:01:29.298077+00:00",
+        "user_label": null,
+        "user_confidence": null,
+        "user_bbox": null,
+        "user_colors": null,
+        "display_name": null,
+        "notes": null,
+        "is_manually_added": false,
+        "is_manually_edited": false,
+        "is_deleted": false,
+        "last_modified_at": null
+      }
+    ],
+    "is_composite": false,
+    "composite_metadata": null,
+    "tags": [],
+    "user_notes": null
+  },
+  {
+    "id": "boy",
+    "image_name": "boy.png",
+    "file_path": "D:\\~Projects\\Induseuro-labs-intern-assignment\\question_1_image_catalog\\data\\boy.png",
+    "width": 500,
+    "height": 600,
+    "format": "PNG",
+    "file_size_bytes": 3346,
+    "created_at": "2026-10-11T06:01:29.603084+00:00",
+    "updated_at": "2026-10-11T06:01:29.603084+00:00",
+    "detection_status": "completed",
+    "has_manual_corrections": false,
+    "objects": [
+      {
+        "id": "obj_2e3b11a3",
+        "auto_label": "boy",
+        "auto_confidence": 0.95,
+        "auto_bbox": {
+          "x": 180,
+          "y": 70,
+          "width": 141,
+          "height": 426
+        },
+        "auto_colors": [
+          "blue",
+          "navy",
+          "brown",
+          "black"
+        ],
+        "detector_model": "CartoonCharacterDetector_v1",
+        "detected_at": "2026-10-11T06:01:29.603084+00:00",
+        "user_label": null,
+        "user_confidence": null,
+        "user_bbox": null,
+        "user_colors": null,
+        "display_name": null,
+        "notes": null,
+        "is_manually_added": false,
+        "is_manually_edited": false,
+        "is_deleted": false,
+        "last_modified_at": null
+      }
+    ],
+    "is_composite": false,
+    "composite_metadata": null,
+    "tags": [],
+    "user_notes": null
+  },
+  {
+    "id": "girl",
+    "image_name": "girl.png",
+    "file_path": "D:\\~Projects\\Induseuro-labs-intern-assignment\\question_1_image_catalog\\data\\girl.png",
+    "width": 500,
+    "height": 600,
+    "format": "PNG",
+    "file_size_bytes": 3659,
+    "created_at": "2026-10-11T06:01:29.911795+00:00",
+    "updated_at": "2026-10-11T06:01:29.911795+00:00",
+    "detection_status": "completed",
+    "has_manual_corrections": false,
+    "objects": [
+      {
+        "id": "obj_0bd065c9",
+        "auto_label": "girl",
+        "auto_confidence": 0.95,
+        "auto_bbox": {
+          "x": 170,
+          "y": 70,
+          "width": 161,
+          "height": 421
+        },
+        "auto_colors": [
+          "pink",
+          "yellow",
+          "red",
+          "black"
+        ],
+        "detector_model": "CartoonCharacterDetector_v1",
+        "detected_at": "2026-10-11T06:01:29.911795+00:00",
+        "user_label": null,
+        "user_confidence": null,
+        "user_bbox": null,
+        "user_colors": null,
+        "display_name": null,
+        "notes": null,
+        "is_manually_added": false,
+        "is_manually_edited": false,
+        "is_deleted": false,
+        "last_modified_at": null
+      }
+    ],
+    "is_composite": false,
+    "composite_metadata": null,
+    "tags": [],
+    "user_notes": null
+  },
+  {
+    "id": "shapes",
+    "image_name": "shapes.png",
+    "file_path": "D:\\~Projects\\Induseuro-labs-intern-assignment\\question_1_image_catalog\\data\\shapes.png",
+    "width": 700,
+    "height": 500,
+    "format": "PNG",
+    "file_size_bytes": 3315,
+    "created_at": "2026-10-11T06:01:29.952469+00:00",
+    "updated_at": "2026-10-11T06:01:29.952469+00:00",
+    "detection_status": "completed",
+    "has_manual_corrections": false,
+    "objects": [
+      {
+        "id": "obj_312180c4",
+        "auto_label": "square",
+        "auto_confidence": 0.95,
+        "auto_bbox": {
+          "x": 260,
+          "y": 80,
+          "width": 141,
+          "height": 141
+        },
+        "auto_colors": [
+          "red"
+        ],
+        "detector_model": "ColorSegmentedGeometricDetector_v1",
+        "detected_at": "2026-10-11T06:01:29.940470+00:00",
+        "user_label": null,
+        "user_confidence": null,
+        "user_bbox": null,
+        "user_colors": null,
+        "display_name": null,
+        "notes": null,
+        "is_manually_added": false,
+        "is_manually_edited": false,
+        "is_deleted": false,
+        "last_modified_at": null
+      },
+      {
+        "id": "obj_2080556c",
+        "auto_label": "rectangle",
+        "auto_confidence": 0.93,
+        "auto_bbox": {
+          "x": 150,
+          "y": 300,
+          "width": 401,
+          "height": 121
+        },
+        "auto_colors": [
+          "orange"
+        ],
+        "detector_model": "ColorSegmentedGeometricDetector_v1",
+        "detected_at": "2026-10-11T06:01:29.942467+00:00",
+        "user_label": null,
+        "user_confidence": null,
+        "user_bbox": null,
+        "user_colors": null,
+        "display_name": null,
+        "notes": null,
+        "is_manually_added": false,
+        "is_manually_edited": false,
+        "is_deleted": false,
+        "last_modified_at": null
+      },
+      {
+        "id": "obj_9f53953a",
+        "auto_label": "triangle",
+        "auto_confidence": 0.94,
+        "auto_bbox": {
+          "x": 462,
+          "y": 84,
+          "width": 137,
+          "height": 137
+        },
+        "auto_colors": [
+          "green"
+        ],
+        "detector_model": "ColorSegmentedGeometricDetector_v1",
+        "detected_at": "2026-10-11T06:01:29.946467+00:00",
+        "user_label": null,
+        "user_confidence": null,
+        "user_bbox": null,
+        "user_colors": null,
+        "display_name": null,
+        "notes": null,
+        "is_manually_added": false,
+        "is_manually_edited": false,
+        "is_deleted": false,
+        "last_modified_at": null
+      },
+      {
+        "id": "obj_955b223e",
+        "auto_label": "circle",
+        "auto_confidence": 0.96,
+        "auto_bbox": {
+          "x": 60,
+          "y": 80,
+          "width": 141,
+          "height": 141
+        },
+        "auto_colors": [
+          "blue"
+        ],
+        "detector_model": "ColorSegmentedGeometricDetector_v1",
+        "detected_at": "2026-10-11T06:01:29.948465+00:00",
+        "user_label": null,
+        "user_confidence": null,
+        "user_bbox": null,
+        "user_colors": null,
+        "display_name": null,
+        "notes": null,
+        "is_manually_added": false,
+        "is_manually_edited": false,
+        "is_deleted": false,
+        "last_modified_at": null
+      }
+    ],
+    "is_composite": false,
+    "composite_metadata": null,
+    "tags": [],
+    "user_notes": null
+  },
+  {
+    "id": "colors",
+    "image_name": "colors.png",
+    "file_path": "D:\\~Projects\\Induseuro-labs-intern-assignment\\question_1_image_catalog\\data\\colors.png",
+    "width": 800,
+    "height": 400,
+    "format": "PNG",
+    "file_size_bytes": 2045,
+    "created_at": "2026-10-11T06:01:30.515998+00:00",
+    "updated_at": "2026-10-11T06:01:30.515998+00:00",
+    "detection_status": "completed",
+    "has_manual_corrections": false,
+    "objects": [
+      {
+        "id": "obj_2a18d46d",
+        "auto_label": "red_swatch",
+        "auto_confidence": 0.98,
+        "auto_bbox": {
+          "x": 40,
+          "y": 100,
+          "width": 121,
+          "height": 161
+        },
+        "auto_colors": [
+          "red"
+        ],
+        "detector_model": "ColorSwatchDetector_v1",
+        "detected_at": "2026-10-11T06:01:30.119719+00:00",
+        "user_label": null,
+        "user_confidence": null,
+        "user_bbox": null,
+        "user_colors": null,
+        "display_name": null,
+        "notes": null,
+        "is_manually_added": false,
+        "is_manually_edited": false,
+        "is_deleted": false,
+        "last_modified_at": null
+      },
+      {
+        "id": "obj_810b3ee2",
+        "auto_label": "blue_swatch",
+        "auto_confidence": 0.98,
+        "auto_bbox": {
+          "x": 190,
+          "y": 100,
+          "width": 121,
+          "height": 161
+        },
+        "auto_colors": [
+          "blue"
+        ],
+        "detector_model": "ColorSwatchDetector_v1",
+        "detected_at": "2026-10-11T06:01:30.214301+00:00",
+        "user_label": null,
+        "user_confidence": null,
+        "user_bbox": null,
+        "user_colors": null,
+        "display_name": null,
+        "notes": null,
+        "is_manually_added": false,
+        "is_manually_edited": false,
+        "is_deleted": false,
+        "last_modified_at": null
+      },
+      {
+        "id": "obj_106d0f1a",
+        "auto_label": "green_swatch",
+        "auto_confidence": 0.98,
+        "auto_bbox": {
+          "x": 340,
+          "y": 100,
+          "width": 121,
+          "height": 161
+        },
+        "auto_colors": [
+          "green"
+        ],
+        "detector_model": "ColorSwatchDetector_v1",
+        "detected_at": "2026-10-11T06:01:30.332346+00:00",
+        "user_label": null,
+        "user_confidence": null,
+        "user_bbox": null,
+        "user_colors": null,
+        "display_name": null,
+        "notes": null,
+        "is_manually_added": false,
+        "is_manually_edited": false,
+        "is_deleted": false,
+        "last_modified_at": null
+      },
+      {
+        "id": "obj_6eb1f764",
+        "auto_label": "yellow_swatch",
+        "auto_confidence": 0.98,
+        "auto_bbox": {
+          "x": 490,
+          "y": 100,
+          "width": 121,
+          "height": 161
+        },
+        "auto_colors": [
+          "yellow"
+        ],
+        "detector_model": "ColorSwatchDetector_v1",
+        "detected_at": "2026-10-11T06:01:30.403996+00:00",
+        "user_label": null,
+        "user_confidence": null,
+        "user_bbox": null,
+        "user_colors": null,
+        "display_name": null,
+        "notes": null,
+        "is_manually_added": false,
+        "is_manually_edited": false,
+        "is_deleted": false,
+        "last_modified_at": null
+      },
+      {
+        "id": "obj_43468691",
+        "auto_label": "purple_swatch",
+        "auto_confidence": 0.98,
+        "auto_bbox": {
+          "x": 640,
+          "y": 100,
+          "width": 121,
+          "height": 161
+        },
+        "auto_colors": [
+          "purple"
+        ],
+        "detector_model": "ColorSwatchDetector_v1",
+        "detected_at": "2026-10-11T06:01:30.514999+00:00",
+        "user_label": null,
+        "user_confidence": null,
+        "user_bbox": null,
+        "user_colors": null,
+        "display_name": null,
+        "notes": null,
+        "is_manually_added": false,
+        "is_manually_edited": false,
+        "is_deleted": false,
+        "last_modified_at": null
+      }
+    ],
+    "is_composite": false,
+    "composite_metadata": null,
+    "tags": [],
+    "user_notes": null
+  },
+  {
+    "id": "apple_orange",
+    "image_name": "apple_orange.png",
+    "file_path": "D:\\~Projects\\Induseuro-labs-intern-assignment\\question_1_image_catalog\\data\\apple_orange.png",
+    "width": 700,
+    "height": 500,
+    "format": "PNG",
+    "file_size_bytes": 4484,
+    "created_at": "2026-10-11T06:01:30.566998+00:00",
+    "updated_at": "2026-10-11T06:01:30.566998+00:00",
+    "detection_status": "completed",
+    "has_manual_corrections": false,
+    "objects": [
+      {
+        "id": "obj_1c08d686",
+        "auto_label": "apple",
+        "auto_confidence": 0.96,
+        "auto_bbox": {
+          "x": 90,
+          "y": 133,
+          "width": 221,
+          "height": 258
+        },
+        "auto_colors": [
+          "red"
+        ],
+        "detector_model": "FruitColorSegmentation_v1",
+        "detected_at": "2026-10-11T06:01:30.558995+00:00",
+        "user_label": null,
+        "user_confidence": null,
+        "user_bbox": null,
+        "user_colors": null,
+        "display_name": null,
+        "notes": null,
+        "is_manually_added": false,
+        "is_manually_edited": false,
+        "is_deleted": false,
+        "last_modified_at": null
+      },
+      {
+        "id": "obj_2dd2691d",
+        "auto_label": "orange",
+        "auto_confidence": 0.96,
+        "auto_bbox": {
+          "x": 390,
+          "y": 133,
+          "width": 231,
+          "height": 258
+        },
+        "auto_colors": [
+          "orange"
+        ],
+        "detector_model": "FruitColorSegmentation_v1",
+        "detected_at": "2026-10-11T06:01:30.565995+00:00",
+        "user_label": null,
+        "user_confidence": null,
+        "user_bbox": null,
+        "user_colors": null,
+        "display_name": null,
+        "notes": null,
+        "is_manually_added": false,
+        "is_manually_edited": false,
+        "is_deleted": false,
+        "last_modified_at": null
+      }
+    ],
+    "is_composite": false,
+    "composite_metadata": null,
+    "tags": [],
+    "user_notes": null
+  },
+  {
+    "id": "overlapping_shapes",
+    "image_name": "overlapping_shapes.png",
+    "file_path": "D:\\~Projects\\Induseuro-labs-intern-assignment\\question_1_image_catalog\\data\\overlapping_shapes.png",
+    "width": 600,
+    "height": 500,
+    "format": "PNG",
+    "file_size_bytes": 3791,
+    "created_at": "2026-10-11T06:01:30.594998+00:00",
+    "updated_at": "2026-10-11T06:01:30.595999+00:00",
+    "detection_status": "completed",
+    "has_manual_corrections": false,
+    "objects": [
+      {
+        "id": "obj_31d54ed6",
+        "auto_label": "triangle",
+        "auto_confidence": 0.94,
+        "auto_bbox": {
+          "x": 257,
+          "y": 104,
+          "width": 99,
+          "height": 95
+        },
+        "auto_colors": [
+          "red"
+        ],
+        "detector_model": "ColorSegmentedGeometricDetector_v1",
+        "detected_at": "2026-10-11T06:01:30.588000+00:00",
+        "user_label": null,
+        "user_confidence": null,
+        "user_bbox": null,
+        "user_colors": null,
+        "display_name": null,
+        "notes": null,
+        "is_manually_added": false,
+        "is_manually_edited": false,
+        "is_deleted": false,
+        "last_modified_at": null
+      },
+      {
+        "id": "obj_9a931881",
+        "auto_label": "yellow_shape",
+        "auto_confidence": 0.85,
+        "auto_bbox": {
+          "x": 140,
+          "y": 140,
+          "width": 140,
+          "height": 221
+        },
+        "auto_colors": [
+          "yellow"
+        ],
+        "detector_model": "ColorSegmentedGeometricDetector_v1",
+        "detected_at": "2026-10-11T06:01:30.590000+00:00",
+        "user_label": null,
+        "user_confidence": null,
+        "user_bbox": null,
+        "user_colors": null,
+        "display_name": null,
+        "notes": null,
+        "is_manually_added": false,
+        "is_manually_edited": false,
+        "is_deleted": false,
+        "last_modified_at": null
+      },
+      {
+        "id": "obj_cbfdfc4f",
+        "auto_label": "circle",
+        "auto_confidence": 0.96,
+        "auto_bbox": {
+          "x": 220,
+          "y": 180,
+          "width": 201,
+          "height": 201
+        },
+        "auto_colors": [
+          "blue"
+        ],
+        "detector_model": "ColorSegmentedGeometricDetector_v1",
+        "detected_at": "2026-10-11T06:01:30.593999+00:00",
+        "user_label": null,
+        "user_confidence": null,
+        "user_bbox": null,
+        "user_colors": null,
+        "display_name": null,
+        "notes": null,
+        "is_manually_added": false,
+        "is_manually_edited": false,
+        "is_deleted": false,
+        "last_modified_at": null
+      }
+    ],
+    "is_composite": false,
+    "composite_metadata": null,
+    "tags": [],
+    "user_notes": null
+  },
+  {
+    "id": "empty_canvas",
+    "image_name": "empty_canvas.png",
+    "file_path": "D:\\~Projects\\Induseuro-labs-intern-assignment\\question_1_image_catalog\\data\\empty_canvas.png",
+    "width": 500,
+    "height": 500,
+    "format": "PNG",
+    "file_size_bytes": 1838,
+    "created_at": "2026-10-11T06:01:30.609997+00:00",
+    "updated_at": "2026-10-11T06:01:30.609997+00:00",
+    "detection_status": "no_objects_found",
+    "has_manual_corrections": false,
+    "objects": [],
+    "is_composite": false,
+    "composite_metadata": null,
+    "tags": [],
+    "user_notes": null
+  }
+]

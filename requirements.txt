@@ -1,0 +1,20 @@
+# Core Framework & Web APIs
+fastapi>=0.100.0
+uvicorn[standard]>=0.23.0
+streamlit>=1.30.0
+python-multipart>=0.0.6
+pydantic>=2.0.0
+
+# Computer Vision & Multi-Modal Image Processing
+pillow>=9.5.0
+numpy>=1.23.0
+scipy>=1.10.0
+matplotlib>=3.7.0
+plotly>=5.0.0
+
+# NLP & String Invariant Cascades
+rapidfuzz>=3.0.0
+
+# Optional Accelerators
+# ultralytics>=8.0.0
+# sentence-transformers>=2.2.0
