@@ -117,6 +117,20 @@ class CompositeEngine:
         Converts white/neutral background to alpha transparency so assets composite seamlessly.
         """
         if not os.path.exists(entry.file_path):
+            base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            fname = entry.image_name or os.path.basename(entry.file_path.replace("\\", "/"))
+            candidates = [
+                os.path.join(base_dir, "data", fname),
+                os.path.join(base_dir, "data", "uploaded", fname),
+                os.path.join(base_dir, "catalog", "composites", fname),
+                os.path.join(base_dir, fname),
+            ]
+            for cand in candidates:
+                if os.path.exists(cand):
+                    entry.file_path = cand
+                    break
+
+        if not os.path.exists(entry.file_path):
             raise FileNotFoundError(f"Source catalog file not found: {entry.file_path}")
 
         full_img = Image.open(entry.file_path).convert("RGBA")

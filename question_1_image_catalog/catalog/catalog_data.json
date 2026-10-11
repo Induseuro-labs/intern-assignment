@@ -2,7 +2,7 @@
   {
     "id": "apple",
     "image_name": "apple.png",
-    "file_path": "D:\\~Projects\\Induseuro-labs-intern-assignment\\question_1_image_catalog\\data\\apple.png",
+    "file_path": "question_1_image_catalog/data/apple.png",
     "width": 500,
     "height": 500,
     "format": "PNG",
@@ -54,7 +54,7 @@
   {
     "id": "orange",
     "image_name": "orange.png",
-    "file_path": "D:\\~Projects\\Induseuro-labs-intern-assignment\\question_1_image_catalog\\data\\orange.png",
+    "file_path": "question_1_image_catalog/data/orange.png",
     "width": 500,
     "height": 500,
     "format": "PNG",
@@ -106,7 +106,7 @@
   {
     "id": "boy",
     "image_name": "boy.png",
-    "file_path": "D:\\~Projects\\Induseuro-labs-intern-assignment\\question_1_image_catalog\\data\\boy.png",
+    "file_path": "question_1_image_catalog/data/boy.png",
     "width": 500,
     "height": 600,
     "format": "PNG",
@@ -161,7 +161,7 @@
   {
     "id": "girl",
     "image_name": "girl.png",
-    "file_path": "D:\\~Projects\\Induseuro-labs-intern-assignment\\question_1_image_catalog\\data\\girl.png",
+    "file_path": "question_1_image_catalog/data/girl.png",
     "width": 500,
     "height": 600,
     "format": "PNG",
@@ -216,7 +216,7 @@
   {
     "id": "shapes",
     "image_name": "shapes.png",
-    "file_path": "D:\\~Projects\\Induseuro-labs-intern-assignment\\question_1_image_catalog\\data\\shapes.png",
+    "file_path": "question_1_image_catalog/data/shapes.png",
     "width": 700,
     "height": 500,
     "format": "PNG",
@@ -361,7 +361,7 @@
   {
     "id": "colors",
     "image_name": "colors.png",
-    "file_path": "D:\\~Projects\\Induseuro-labs-intern-assignment\\question_1_image_catalog\\data\\colors.png",
+    "file_path": "question_1_image_catalog/data/colors.png",
     "width": 800,
     "height": 400,
     "format": "PNG",
@@ -537,7 +537,7 @@
   {
     "id": "apple_orange",
     "image_name": "apple_orange.png",
-    "file_path": "D:\\~Projects\\Induseuro-labs-intern-assignment\\question_1_image_catalog\\data\\apple_orange.png",
+    "file_path": "question_1_image_catalog/data/apple_orange.png",
     "width": 700,
     "height": 500,
     "format": "PNG",
@@ -620,7 +620,7 @@
   {
     "id": "overlapping_shapes",
     "image_name": "overlapping_shapes.png",
-    "file_path": "D:\\~Projects\\Induseuro-labs-intern-assignment\\question_1_image_catalog\\data\\overlapping_shapes.png",
+    "file_path": "question_1_image_catalog/data/overlapping_shapes.png",
     "width": 600,
     "height": 500,
     "format": "PNG",
@@ -739,7 +739,7 @@
   {
     "id": "empty_canvas",
     "image_name": "empty_canvas.png",
-    "file_path": "D:\\~Projects\\Induseuro-labs-intern-assignment\\question_1_image_catalog\\data\\empty_canvas.png",
+    "file_path": "question_1_image_catalog/data/empty_canvas.png",
     "width": 500,
     "height": 500,
     "format": "PNG",
@@ -759,7 +759,7 @@
   {
     "id": "composite_c18295e4",
     "image_name": "composite_c18295e4.png",
-    "file_path": "D:\\~Projects\\Induseuro-labs-intern-assignment\\question_1_image_catalog\\catalog\\composites\\composite_c18295e4.png",
+    "file_path": "question_1_image_catalog/catalog/composites/composite_c18295e4.png",
     "width": 1000,
     "height": 600,
     "format": "PNG",

@@ -10,6 +10,7 @@ Capable of detecting:
 """
 
 from __future__ import annotations
+import os
 import cv2
 import numpy as np
 from PIL import Image
@@ -101,6 +102,20 @@ class HybridObjectDetector:
                 self.yolo_model = None
 
     def detect(self, image_path: str) -> List[DetectedObject]:
+        if not os.path.exists(image_path):
+            base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            fname = os.path.basename(image_path.replace("\\", "/"))
+            candidates = [
+                os.path.join(base_dir, "data", fname),
+                os.path.join(base_dir, "data", "uploaded", fname),
+                os.path.join(base_dir, "catalog", "composites", fname),
+                os.path.join(base_dir, fname),
+            ]
+            for cand in candidates:
+                if os.path.exists(cand):
+                    image_path = cand
+                    break
+
         img_bgr = cv2.imread(image_path)
         if img_bgr is None:
             raise FileNotFoundError(f"Could not load image at {image_path}")

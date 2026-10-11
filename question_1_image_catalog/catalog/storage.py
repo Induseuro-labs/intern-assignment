@@ -15,6 +15,33 @@ from .models import CatalogEntry, DetectedObject, BoundingBox
 DEFAULT_STORAGE_DIR = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_JSON_PATH = os.path.join(DEFAULT_STORAGE_DIR, "catalog_data.json")
 
+def resolve_catalog_file_path(path: str, image_name: Optional[str] = None) -> str:
+    """
+    Cross-platform path resolver for catalog image assets.
+    Handles differences between Windows development paths and Linux/Docker production paths.
+    """
+    if path and os.path.exists(path):
+        return os.path.abspath(path)
+
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    data_dir = os.path.join(base_dir, "data")
+    comp_dir = os.path.join(base_dir, "catalog", "composites")
+    fname = image_name or (os.path.basename(path.replace("\\", "/")) if path else "")
+
+    if fname:
+        candidates = [
+            os.path.join(data_dir, fname),
+            os.path.join(data_dir, "uploaded", fname),
+            os.path.join(comp_dir, fname),
+            os.path.join(base_dir, fname),
+        ]
+        for cand in candidates:
+            if os.path.exists(cand):
+                return os.path.abspath(cand)
+
+    return path
+
+
 class ImageCatalog:
     """
     Catalog repository for storing and managing reusable image assets and metadata.
@@ -30,10 +57,11 @@ class ImageCatalog:
             try:
                 with open(self.storage_path, "r", encoding="utf-8") as f:
                     raw_data = json.load(f)
-                    self._entries = {
-                        item["id"]: CatalogEntry.model_validate(item)
-                        for item in raw_data
-                    }
+                    self._entries = {}
+                    for item in raw_data:
+                        entry = CatalogEntry.model_validate(item)
+                        entry.file_path = resolve_catalog_file_path(entry.file_path, entry.image_name)
+                        self._entries[entry.id] = entry
             except Exception as e:
                 print(f"[Warning] Failed to load catalog from {self.storage_path}: {e}")
                 self._entries = {}
@@ -49,21 +77,28 @@ class ImageCatalog:
 
     def add_entry(self, entry: CatalogEntry) -> CatalogEntry:
         """Adds or updates an entry and saves to disk."""
+        entry.file_path = resolve_catalog_file_path(entry.file_path, entry.image_name)
         self._entries[entry.id] = entry
         self.save()
         return entry
 
     def get_entry(self, entry_id_or_name: str) -> Optional[CatalogEntry]:
         """Looks up entry by ID or image name."""
-        if entry_id_or_name in self._entries:
-            return self._entries[entry_id_or_name]
-        for entry in self._entries.values():
-            if entry.image_name == entry_id_or_name:
-                return entry
-        return None
+        entry = self._entries.get(entry_id_or_name)
+        if not entry:
+            for e in self._entries.values():
+                if e.image_name == entry_id_or_name:
+                    entry = e
+                    break
+        if entry and not os.path.exists(entry.file_path):
+            entry.file_path = resolve_catalog_file_path(entry.file_path, entry.image_name)
+        return entry
 
     def list_entries(self) -> List[CatalogEntry]:
         """Returns all entries."""
+        for entry in self._entries.values():
+            if not os.path.exists(entry.file_path):
+                entry.file_path = resolve_catalog_file_path(entry.file_path, entry.image_name)
         return list(self._entries.values())
 
     def delete_entry(self, entry_id: str) -> bool:

@@ -95,17 +95,22 @@ if len(repo_q2.list_questions()) == 0:
 # -----------------------------------------------------------------------------
 @app.get("/images/{category}/{filename}")
 async def serve_image(category: str, filename: str):
+    candidates = []
     if category == "data":
-        target = os.path.join(Q1_DATA_DIR, filename)
+        candidates.append(os.path.join(Q1_DATA_DIR, filename))
     elif category == "composites":
-        target = os.path.join(Q1_COMPOSITES_DIR, filename)
+        candidates.append(os.path.join(Q1_COMPOSITES_DIR, filename))
     elif category == "uploaded":
-        target = os.path.join(Q1_DATA_DIR, "uploaded", filename)
-    else:
-        target = os.path.join(Q1_DATA_DIR, filename)
+        candidates.append(os.path.join(Q1_DATA_DIR, "uploaded", filename))
 
-    if os.path.exists(target):
-        return FileResponse(target)
+    candidates.extend([
+        os.path.join(Q1_DATA_DIR, filename),
+        os.path.join(Q1_DATA_DIR, "uploaded", filename),
+        os.path.join(Q1_COMPOSITES_DIR, filename),
+    ])
+    for target in candidates:
+        if os.path.exists(target):
+            return FileResponse(target)
     raise HTTPException(status_code=404, detail="Image file not found")
 
 
@@ -227,7 +232,26 @@ def redetect(req: RedetectRequest):
     entry = catalog.get_entry(req.entry_id)
     if not entry:
         raise HTTPException(status_code=404, detail=f"Entry '{req.entry_id}' not found")
-    fresh = detector_q1.detect(entry.file_path)
+
+    target_path = entry.file_path
+    if not os.path.exists(target_path):
+        fname = entry.image_name or os.path.basename(target_path.replace("\\", "/"))
+        for cand_dir in [Q1_DATA_DIR, os.path.join(Q1_DATA_DIR, "uploaded"), Q1_COMPOSITES_DIR]:
+            cand = os.path.join(cand_dir, fname)
+            if os.path.exists(cand):
+                target_path = cand
+                entry.file_path = cand
+                catalog.save()
+                break
+
+    if not os.path.exists(target_path):
+        raise HTTPException(status_code=404, detail=f"Image file for entry '{req.entry_id}' not found on server at {target_path}")
+
+    try:
+        fresh = detector_q1.detect(target_path)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Detection failed on '{target_path}': {str(e)}")
+
     try:
         updated = catalog.update_detection(entry.id, fresh, force=req.force)
         return updated.model_dump()

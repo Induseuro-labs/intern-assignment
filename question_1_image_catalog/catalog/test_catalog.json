@@ -7,15 +7,15 @@
     "height": 500,
     "format": "PNG",
     "file_size_bytes": 3123,
-    "created_at": "2026-10-11T06:41:29.830090+00:00",
-    "updated_at": "2026-10-11T06:41:30.979542+00:00",
+    "created_at": "2026-10-11T11:28:47.224897+00:00",
+    "updated_at": "2026-10-11T11:28:48.027017+00:00",
     "detection_status": "manually_corrected",
     "objects_source": "manual",
     "has_manual_corrections": true,
     "detection_runs": [],
     "objects": [
       {
-        "id": "obj_f9c3eaa4",
+        "id": "obj_96ee6149",
         "auto_label": "apple",
         "auto_confidence": 0.96,
         "auto_bbox": {
@@ -28,7 +28,7 @@
           "red"
         ],
         "detector_model": "FruitColorSegmentation_v1",
-        "detected_at": "2026-10-11T06:41:29.826125+00:00",
+        "detected_at": "2026-10-11T11:28:47.221892+00:00",
         "shape": null,
         "occluded_by": [],
         "visible_fraction": 1.0,
@@ -46,7 +46,7 @@
         "last_modified_at": null
       },
       {
-        "id": "obj_f21a561e",
+        "id": "obj_437ca70d",
         "auto_label": null,
         "auto_confidence": null,
         "auto_bbox": null,
@@ -74,7 +74,7 @@
         "is_manually_added": true,
         "is_manually_edited": false,
         "is_deleted": false,
-        "last_modified_at": "2026-10-11T06:41:30.979542+00:00"
+        "last_modified_at": "2026-10-11T11:28:48.027017+00:00"
       }
     ],
     "is_composite": false,
@@ -90,15 +90,15 @@
     "height": 500,
     "format": "PNG",
     "file_size_bytes": 3109,
-    "created_at": "2026-10-11T06:41:29.879508+00:00",
-    "updated_at": "2026-10-11T06:41:29.879508+00:00",
+    "created_at": "2026-10-11T11:28:47.256016+00:00",
+    "updated_at": "2026-10-11T11:28:47.256016+00:00",
     "detection_status": "completed",
     "objects_source": "auto",
     "has_manual_corrections": false,
     "detection_runs": [],
     "objects": [
       {
-        "id": "obj_b6192951",
+        "id": "obj_6dd01873",
         "auto_label": "orange",
         "auto_confidence": 0.96,
         "auto_bbox": {
@@ -111,7 +111,7 @@
           "orange"
         ],
         "detector_model": "FruitColorSegmentation_v1",
-        "detected_at": "2026-10-11T06:41:29.878507+00:00",
+        "detected_at": "2026-10-11T11:28:47.256016+00:00",
         "shape": null,
         "occluded_by": [],
         "visible_fraction": 1.0,
@@ -142,15 +142,15 @@
     "height": 600,
     "format": "PNG",
     "file_size_bytes": 3346,
-    "created_at": "2026-10-11T06:41:30.262281+00:00",
-    "updated_at": "2026-10-11T06:41:30.982537+00:00",
+    "created_at": "2026-10-11T11:28:47.429783+00:00",
+    "updated_at": "2026-10-11T11:28:48.034019+00:00",
     "detection_status": "manually_corrected",
     "objects_source": "manual",
     "has_manual_corrections": true,
     "detection_runs": [],
     "objects": [
       {
-        "id": "obj_5e54544b",
+        "id": "obj_381ceda5",
         "auto_label": "boy",
         "auto_confidence": 0.95,
         "auto_bbox": {
@@ -166,7 +166,7 @@
           "black"
         ],
         "detector_model": "CartoonCharacterDetector_v1",
-        "detected_at": "2026-10-11T06:41:30.262281+00:00",
+        "detected_at": "2026-10-11T11:28:47.427776+00:00",
         "shape": null,
         "occluded_by": [],
         "visible_fraction": 1.0,
@@ -184,7 +184,7 @@
         "is_manually_added": false,
         "is_manually_edited": true,
         "is_deleted": false,
-        "last_modified_at": "2026-10-11T06:41:30.982537+00:00"
+        "last_modified_at": "2026-10-11T11:28:48.034019+00:00"
       }
     ],
     "is_composite": false,
@@ -200,15 +200,15 @@
     "height": 600,
     "format": "PNG",
     "file_size_bytes": 3659,
-    "created_at": "2026-10-11T06:41:30.416006+00:00",
-    "updated_at": "2026-10-11T06:41:30.416006+00:00",
+    "created_at": "2026-10-11T11:28:47.519570+00:00",
+    "updated_at": "2026-10-11T11:28:47.519570+00:00",
     "detection_status": "completed",
     "objects_source": "auto",
     "has_manual_corrections": false,
     "detection_runs": [],
     "objects": [
       {
-        "id": "obj_0f0f61e4",
+        "id": "obj_b7b1a7e1",
         "auto_label": "girl",
         "auto_confidence": 0.95,
         "auto_bbox": {
@@ -224,7 +224,7 @@
           "black"
         ],
         "detector_model": "CartoonCharacterDetector_v1",
-        "detected_at": "2026-10-11T06:41:30.416006+00:00",
+        "detected_at": "2026-10-11T11:28:47.519570+00:00",
         "shape": null,
         "occluded_by": [],
         "visible_fraction": 1.0,
@@ -255,15 +255,15 @@
     "height": 500,
     "format": "PNG",
     "file_size_bytes": 3315,
-    "created_at": "2026-10-11T06:41:30.554637+00:00",
-    "updated_at": "2026-10-11T06:41:30.554637+00:00",
+    "created_at": "2026-10-11T11:28:47.549571+00:00",
+    "updated_at": "2026-10-11T11:28:47.549571+00:00",
     "detection_status": "completed",
     "objects_source": "auto",
     "has_manual_corrections": false,
     "detection_runs": [],
     "objects": [
       {
-        "id": "obj_2ae8b931",
+        "id": "obj_5f364c4c",
         "auto_label": "square",
         "auto_confidence": 0.95,
         "auto_bbox": {
@@ -276,7 +276,7 @@
           "red"
         ],
         "detector_model": "ColorSegmentedGeometricDetector_v1",
-        "detected_at": "2026-10-11T06:41:30.546637+00:00",
+        "detected_at": "2026-10-11T11:28:47.539572+00:00",
         "shape": "square",
         "occluded_by": [],
         "visible_fraction": 1.0,
@@ -294,7 +294,7 @@
         "last_modified_at": null
       },
       {
-        "id": "obj_0402006c",
+        "id": "obj_14aa07cf",
         "auto_label": "rectangle",
         "auto_confidence": 0.93,
         "auto_bbox": {
@@ -307,7 +307,7 @@
           "orange"
         ],
         "detector_model": "ColorSegmentedGeometricDetector_v1",
-        "detected_at": "2026-10-11T06:41:30.547637+00:00",
+        "detected_at": "2026-10-11T11:28:47.540571+00:00",
         "shape": "rectangle",
         "occluded_by": [],
         "visible_fraction": 1.0,
@@ -325,7 +325,7 @@
         "last_modified_at": null
       },
       {
-        "id": "obj_0017d86c",
+        "id": "obj_e2700321",
         "auto_label": "triangle",
         "auto_confidence": 0.94,
         "auto_bbox": {
@@ -338,7 +338,7 @@
           "green"
         ],
         "detector_model": "ColorSegmentedGeometricDetector_v1",
-        "detected_at": "2026-10-11T06:41:30.550636+00:00",
+        "detected_at": "2026-10-11T11:28:47.543579+00:00",
         "shape": "triangle",
         "occluded_by": [],
         "visible_fraction": 1.0,
@@ -356,7 +356,7 @@
         "last_modified_at": null
       },
       {
-        "id": "obj_471d489f",
+        "id": "obj_47b54ccb",
         "auto_label": "circle",
         "auto_confidence": 0.96,
         "auto_bbox": {
@@ -369,7 +369,7 @@
           "blue"
         ],
         "detector_model": "ColorSegmentedGeometricDetector_v1",
-        "detected_at": "2026-10-11T06:41:30.551637+00:00",
+        "detected_at": "2026-10-11T11:28:47.544576+00:00",
         "shape": "circle",
         "occluded_by": [],
         "visible_fraction": 1.0,
@@ -400,15 +400,15 @@
     "height": 400,
     "format": "PNG",
     "file_size_bytes": 2045,
-    "created_at": "2026-10-11T06:41:30.931038+00:00",
-    "updated_at": "2026-10-11T06:41:30.931038+00:00",
+    "created_at": "2026-10-11T11:28:47.975322+00:00",
+    "updated_at": "2026-10-11T11:28:47.975322+00:00",
     "detection_status": "completed",
     "objects_source": "auto",
     "has_manual_corrections": false,
     "detection_runs": [],
     "objects": [
       {
-        "id": "obj_1b6ec801",
+        "id": "obj_daa2b13c",
         "auto_label": "red_swatch",
         "auto_confidence": 0.98,
         "auto_bbox": {
@@ -421,7 +421,7 @@
           "red"
         ],
         "detector_model": "ColorSwatchDetector_v1",
-        "detected_at": "2026-10-11T06:41:30.659637+00:00",
+        "detected_at": "2026-10-11T11:28:47.640213+00:00",
         "shape": null,
         "occluded_by": [],
         "visible_fraction": 1.0,
@@ -439,7 +439,7 @@
         "last_modified_at": null
       },
       {
-        "id": "obj_b4f9fa45",
+        "id": "obj_6ae94aa4",
         "auto_label": "blue_swatch",
         "auto_confidence": 0.98,
         "auto_bbox": {
@@ -452,7 +452,7 @@
           "blue"
         ],
         "detector_model": "ColorSwatchDetector_v1",
-        "detected_at": "2026-10-11T06:41:30.740282+00:00",
+        "detected_at": "2026-10-11T11:28:47.713799+00:00",
         "shape": null,
         "occluded_by": [],
         "visible_fraction": 1.0,
@@ -470,7 +470,7 @@
         "last_modified_at": null
       },
       {
-        "id": "obj_da9e394d",
+        "id": "obj_52cde6ae",
         "auto_label": "green_swatch",
         "auto_confidence": 0.98,
         "auto_bbox": {
@@ -483,7 +483,7 @@
           "green"
         ],
         "detector_model": "ColorSwatchDetector_v1",
-        "detected_at": "2026-10-11T06:41:30.801279+00:00",
+        "detected_at": "2026-10-11T11:28:47.776851+00:00",
         "shape": null,
         "occluded_by": [],
         "visible_fraction": 1.0,
@@ -501,7 +501,7 @@
         "last_modified_at": null
       },
       {
-        "id": "obj_2bf9aab5",
+        "id": "obj_ef03d387",
         "auto_label": "yellow_swatch",
         "auto_confidence": 0.98,
         "auto_bbox": {
@@ -514,7 +514,7 @@
           "yellow"
         ],
         "detector_model": "ColorSwatchDetector_v1",
-        "detected_at": "2026-10-11T06:41:30.868039+00:00",
+        "detected_at": "2026-10-11T11:28:47.881306+00:00",
         "shape": null,
         "occluded_by": [],
         "visible_fraction": 1.0,
@@ -532,7 +532,7 @@
         "last_modified_at": null
       },
       {
-        "id": "obj_94b4c08a",
+        "id": "obj_4811e68f",
         "auto_label": "purple_swatch",
         "auto_confidence": 0.98,
         "auto_bbox": {
@@ -545,7 +545,7 @@
           "purple"
         ],
         "detector_model": "ColorSwatchDetector_v1",
-        "detected_at": "2026-10-11T06:41:30.930037+00:00",
+        "detected_at": "2026-10-11T11:28:47.975322+00:00",
         "shape": null,
         "occluded_by": [],
         "visible_fraction": 1.0,
@@ -576,15 +576,15 @@
     "height": 500,
     "format": "PNG",
     "file_size_bytes": 4484,
-    "created_at": "2026-10-11T06:41:30.976523+00:00",
-    "updated_at": "2026-10-11T06:41:30.976523+00:00",
+    "created_at": "2026-10-11T11:28:48.024015+00:00",
+    "updated_at": "2026-10-11T11:28:48.024015+00:00",
     "detection_status": "completed",
     "objects_source": "auto",
     "has_manual_corrections": false,
     "detection_runs": [],
     "objects": [
       {
-        "id": "obj_11c629b3",
+        "id": "obj_88d50cc9",
         "auto_label": "apple",
         "auto_confidence": 0.96,
         "auto_bbox": {
@@ -597,7 +597,7 @@
           "red"
         ],
         "detector_model": "FruitColorSegmentation_v1",
-        "detected_at": "2026-10-11T06:41:30.968923+00:00",
+        "detected_at": "2026-10-11T11:28:48.018319+00:00",
         "shape": null,
         "occluded_by": [],
         "visible_fraction": 1.0,
@@ -615,7 +615,7 @@
         "last_modified_at": null
       },
       {
-        "id": "obj_668a989c",
+        "id": "obj_50c8469d",
         "auto_label": "orange",
         "auto_confidence": 0.96,
         "auto_bbox": {
@@ -628,7 +628,7 @@
           "orange"
         ],
         "detector_model": "FruitColorSegmentation_v1",
-        "detected_at": "2026-10-11T06:41:30.976523+00:00",
+        "detected_at": "2026-10-11T11:28:48.023011+00:00",
         "shape": null,
         "occluded_by": [],
         "visible_fraction": 1.0,
@@ -659,15 +659,15 @@
     "height": 600,
     "format": "PNG",
     "file_size_bytes": 40084,
-    "created_at": "2026-10-11T06:41:31.376478+00:00",
-    "updated_at": "2026-10-11T06:41:31.376478+00:00",
+    "created_at": "2026-10-11T11:28:48.257782+00:00",
+    "updated_at": "2026-10-11T11:28:48.257782+00:00",
     "detection_status": "completed",
     "objects_source": "composition",
     "has_manual_corrections": false,
     "detection_runs": [],
     "objects": [
       {
-        "id": "obj_ca6611d9",
+        "id": "obj_39474d85",
         "auto_label": "apple",
         "auto_confidence": 1.0,
         "auto_bbox": {
@@ -680,7 +680,7 @@
           "red"
         ],
         "detector_model": "AuthenticCatalogAsset_Provenance",
-        "detected_at": "2026-10-11T06:41:29.830090+00:00",
+        "detected_at": "2026-10-11T11:28:47.224897+00:00",
         "shape": null,
         "occluded_by": [],
         "visible_fraction": 1.0,
@@ -698,7 +698,7 @@
         "last_modified_at": null
       },
       {
-        "id": "obj_42e99f01",
+        "id": "obj_87522b82",
         "auto_label": "orange",
         "auto_confidence": 1.0,
         "auto_bbox": {
@@ -711,7 +711,7 @@
           "orange"
         ],
         "detector_model": "AuthenticCatalogAsset_Provenance",
-        "detected_at": "2026-10-11T06:41:29.879508+00:00",
+        "detected_at": "2026-10-11T11:28:47.256016+00:00",
         "shape": null,
         "occluded_by": [],
         "visible_fraction": 1.0,
@@ -736,7 +736,7 @@
         {
           "catalog_entry_id": "apple",
           "image_name": "apple.png",
-          "object_id": "obj_f9c3eaa4",
+          "object_id": "obj_96ee6149",
           "object_label": "apple",
           "placed_bbox": {
             "x": 128,
@@ -750,7 +750,7 @@
         {
           "catalog_entry_id": "orange",
           "image_name": "orange.png",
-          "object_id": "obj_b6192951",
+          "object_id": "obj_6dd01873",
           "object_label": "orange",
           "placed_bbox": {
             "x": 576,
@@ -771,7 +771,7 @@
       "verification_status": "unverified",
       "verification_matches": [],
       "verification_iou": null,
-      "generated_at": "2026-10-11T06:41:31.376478+00:00"
+      "generated_at": "2026-10-11T11:28:48.257782+00:00"
     },
     "tags": [
       "composite",
@@ -787,15 +787,15 @@
     "height": 650,
     "format": "PNG",
     "file_size_bytes": 46439,
-    "created_at": "2026-10-11T06:41:31.588245+00:00",
-    "updated_at": "2026-10-11T06:41:31.588245+00:00",
+    "created_at": "2026-10-11T11:28:48.419388+00:00",
+    "updated_at": "2026-10-11T11:28:48.419388+00:00",
     "detection_status": "completed",
     "objects_source": "composition",
     "has_manual_corrections": false,
     "detection_runs": [],
     "objects": [
       {
-        "id": "obj_5590af94",
+        "id": "obj_fbf641f4",
         "auto_label": "cartoon_boy_hero",
         "auto_confidence": 1.0,
         "auto_bbox": {
@@ -809,7 +809,7 @@
           "dark_navy"
         ],
         "detector_model": "AuthenticCatalogAsset_Provenance",
-        "detected_at": "2026-10-11T06:41:30.262281+00:00",
+        "detected_at": "2026-10-11T11:28:47.429783+00:00",
         "shape": null,
         "occluded_by": [],
         "visible_fraction": 1.0,
@@ -827,7 +827,7 @@
         "last_modified_at": null
       },
       {
-        "id": "obj_9096691e",
+        "id": "obj_7f668341",
         "auto_label": "girl",
         "auto_confidence": 1.0,
         "auto_bbox": {
@@ -843,7 +843,7 @@
           "black"
         ],
         "detector_model": "AuthenticCatalogAsset_Provenance",
-        "detected_at": "2026-10-11T06:41:30.416006+00:00",
+        "detected_at": "2026-10-11T11:28:47.519570+00:00",
         "shape": null,
         "occluded_by": [],
         "visible_fraction": 1.0,
@@ -861,7 +861,7 @@
         "last_modified_at": null
       },
       {
-        "id": "obj_60679007",
+        "id": "obj_101a4004",
         "auto_label": "shapes",
         "auto_confidence": 1.0,
         "auto_bbox": {
@@ -874,7 +874,7 @@
           "source_asset"
         ],
         "detector_model": "AuthenticCatalogAsset_Provenance",
-        "detected_at": "2026-10-11T06:41:30.554637+00:00",
+        "detected_at": "2026-10-11T11:28:47.549571+00:00",
         "shape": null,
         "occluded_by": [],
         "visible_fraction": 1.0,
@@ -899,7 +899,7 @@
         {
           "catalog_entry_id": "boy",
           "image_name": "boy.png",
-          "object_id": "obj_5e54544b",
+          "object_id": "obj_381ceda5",
           "object_label": "cartoon_boy_hero",
           "placed_bbox": {
             "x": 124,
@@ -913,7 +913,7 @@
         {
           "catalog_entry_id": "girl",
           "image_name": "girl.png",
-          "object_id": "obj_0f0f61e4",
+          "object_id": "obj_b7b1a7e1",
           "object_label": "girl",
           "placed_bbox": {
             "x": 451,
@@ -948,7 +948,7 @@
       "verification_status": "unverified",
       "verification_matches": [],
       "verification_iou": null,
-      "generated_at": "2026-10-11T06:41:31.588245+00:00"
+      "generated_at": "2026-10-11T11:28:48.419388+00:00"
     },
     "tags": [
       "composite",
