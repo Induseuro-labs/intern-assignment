@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Induseuro-Labs Engineering Console</title>
+  <meta name="description" content="Industrial Multi-Modal Image Catalog, Object Detection, and Question Duplicate Prevention Console">
+  <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Tactile Sidebar -->
+    <aside class="app-sidebar">
+      <div class="brand-badge">
+        <span class="chassis-screw corner-screw"></span>
+        <h2>Induseuro-Labs</h2>
+        <p>Engineering Console</p>
+      </div>
+
+      <nav class="nav-group">
+        <button class="nav-item active" id="nav-q1" onclick="switchView('q1')">
+          <span class="led-indicator led-blue"></span>
+          Question 1: Image Catalog
+        </button>
+        <button class="nav-item" id="nav-q2" onclick="switchView('q2')">
+          <span class="led-indicator led-green"></span>
+          Question 2: Duplicate Safeguards
+        </button>
+        <button class="nav-item" id="nav-policy" onclick="openPolicyModal()">
+          <span class="led-indicator led-amber"></span>
+          Privacy Policy & Governance
+        </button>
+      </nav>
+
+      <div class="clay-well status-panel">
+        <div style="font-weight: 700; color: var(--ink-primary); font-size: 0.8rem; margin-bottom: 8px;">System Operations</div>
+        <div style="margin-bottom: 4px;"><span class="led-indicator led-green"></span> Environment: Local Host Machine</div>
+        <div style="margin-bottom: 4px;"><span class="led-indicator led-blue"></span> Detection Engine: Active</div>
+        <div style="margin-bottom: 4px;"><span class="led-indicator led-green"></span> Safeguards: Multi-Stage Cascades</div>
+        <div style="margin-bottom: 4px;"><span class="led-indicator led-amber"></span> Network Telemetry: Zero-Leakage</div>
+        <div><span class="led-indicator led-green"></span> Datastores: Isolated Local Files</div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="app-main">
+      <!-- Top Title Header -->
+      <header class="header-banner">
+        <div>
+          <h1 id="view-title">Image Catalog Management System</h1>
+          <p id="view-subtitle">Multi-Modal Detection, Provenance Audit Log, and Verified Composite Assembly</p>
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <button class="btn-clay" onclick="refreshCurrentView()">Refresh State</button>
+          <button class="btn-clay btn-primary" onclick="openPolicyModal()">Governance Spec</button>
+        </div>
+      </header>
+
+      <!-- ====================================================================
+           QUESTION 1 SECTION
+           ==================================================================== -->
+      <section id="view-q1">
+        <!-- Sub-Tabs Strip -->
+        <div class="tab-strip">
+          <button class="tab-btn active" onclick="switchQ1Tab('inventory', this)">Catalog Inventory</button>
+          <button class="tab-btn" onclick="switchQ1Tab('add', this)">Register Image</button>
+          <button class="tab-btn" onclick="switchQ1Tab('edit', this)">Inspect & Edit Annotations</button>
+          <button class="tab-btn" onclick="switchQ1Tab('compose', this)">Composite Generator</button>
+          <button class="tab-btn" onclick="switchQ1Tab('explore', this)">Detection Sandbox</button>
+        </div>
+
+        <!-- Inventory Sub-tab -->
+        <div id="q1-tab-inventory">
+          <div class="metrics-grid">
+            <div class="metric-unit">
+              <div class="metric-label">Registered Images</div>
+              <div class="metric-value" id="m-q1-total">0</div>
+            </div>
+            <div class="metric-unit">
+              <div class="metric-label">Detected Objects</div>
+              <div class="metric-value" id="m-q1-objects">0</div>
+            </div>
+            <div class="metric-unit">
+              <div class="metric-label">Composite Assets</div>
+              <div class="metric-value" id="m-q1-composites">0</div>
+            </div>
+            <div class="metric-unit">
+              <div class="metric-label">Protected Edits</div>
+              <div class="metric-value" id="m-q1-manual">0</div>
+            </div>
+          </div>
+
+          <div class="catalog-grid" id="catalog-card-container">
+            <!-- Populated via Javascript -->
+          </div>
+        </div>
+
+        <!-- Add Image Sub-tab -->
+        <div id="q1-tab-add" style="display: none;">
+          <div class="split-grid">
+            <div class="clay-card">
+              <h3 style="margin-bottom: 14px;">Register New Image Asset</h3>
+              <form id="form-upload-image" onsubmit="handleImageUpload(event)">
+                <div style="margin-bottom: 14px;">
+                  <label style="font-weight: 600; font-size: 0.85rem; display: block; margin-bottom: 6px;">Unique Identifier</label>
+                  <input type="text" class="input-clay" id="upload-name" placeholder="e.g. sample_asset_01" required>
+                </div>
+                <div style="margin-bottom: 14px;">
+                  <label style="font-weight: 600; font-size: 0.85rem; display: block; margin-bottom: 6px;">Image File (PNG, JPG)</label>
+                  <input type="file" class="input-clay" id="upload-file" accept="image/png, image/jpeg" required onchange="previewUploadImage(event)">
+                </div>
+                <div style="margin-bottom: 18px;">
+                  <label style="display: flex; align-items: center; gap: 8px; font-size: 0.88rem; cursor: pointer;">
+                    <input type="checkbox" id="upload-run-det" checked>
+                    <span>Execute multi-modal object detection upon ingestion</span>
+                  </label>
+                </div>
+                <button type="submit" class="btn-clay btn-primary" id="btn-upload-submit">Ingest Asset</button>
+              </form>
+            </div>
+            <div class="clay-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+              <h4 style="margin-bottom: 12px; color: var(--ink-muted);">Uploaded Asset Preview</h4>
+              <div class="canvas-frame" style="width: 100%;">
+                <img id="img-upload-preview" src="" alt="Preview" style="max-height: 280px; display: none;">
+                <span id="txt-upload-placeholder" style="color: var(--ink-muted); font-size: 0.88rem;">No file selected</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Edit Detections Sub-tab -->
+        <div id="q1-tab-edit" style="display: none;">
+          <div class="clay-card" style="margin-bottom: 18px;">
+            <div style="display: flex; gap: 14px; align-items: center;">
+              <label style="font-weight: 600; font-size: 0.9rem;">Select Image Asset:</label>
+              <select class="select-clay" id="select-edit-entry" style="max-width: 320px;" onchange="loadEntryForEditing(this.value)">
+                <!-- Options populated via JS -->
+              </select>
+              <div style="margin-left: auto; display: flex; gap: 10px;">
+                <button class="btn-clay" onclick="triggerRedetect(false)">Re-run Detection</button>
+                <button class="btn-clay" onclick="triggerRedetect(true)" title="Force overwrite manual source of truth">Force Re-run (--force)</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="split-grid">
+            <div class="clay-card">
+              <h4 style="margin-bottom: 12px;">Active Canvas Annotations</h4>
+              <div class="canvas-frame">
+                <canvas id="edit-canvas"></canvas>
+              </div>
+            </div>
+            <div class="clay-card" style="max-height: 580px; overflow-y: auto;">
+              <h4 style="margin-bottom: 12px;">Detected Objects & User Overrides</h4>
+              <div id="edit-objects-list">
+                <!-- Populated via JS -->
+              </div>
+              <hr style="border: none; border-top: 1px solid #cad6e2; margin: 18px 0;">
+              <h4>Manually Add New Object</h4>
+              <form id="form-manual-obj" onsubmit="handleManualAddObject(event)" style="margin-top: 10px;">
+                <div style="margin-bottom: 10px;">
+                  <input type="text" class="input-clay" id="manual-label" placeholder="Label (e.g. apple_leaf)" required>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 10px;">
+                  <input type="number" class="input-clay" id="manual-x" placeholder="X" value="0">
+                  <input type="number" class="input-clay" id="manual-y" placeholder="Y" value="0">
+                  <input type="number" class="input-clay" id="manual-w" placeholder="W" value="100">
+                  <input type="number" class="input-clay" id="manual-h" placeholder="H" value="100">
+                </div>
+                <div style="margin-bottom: 10px;">
+                  <input type="text" class="input-clay" id="manual-colors" placeholder="Colors (e.g. green, yellow)" value="green">
+                </div>
+                <button type="submit" class="btn-clay btn-primary">Add Object Record</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Composite Generator Sub-tab -->
+        <div id="q1-tab-compose" style="display: none;">
+          <div class="split-grid">
+            <div class="clay-card">
+              <h3 style="margin-bottom: 12px;">Composite Instruction</h3>
+              <p style="color: var(--ink-muted); font-size: 0.88rem; margin-bottom: 16px;">
+                Assembles authentic pixel cutouts with physical ground drop shadows. Stand-in approximations are prohibited.
+              </p>
+              <form id="form-composite" onsubmit="handleGenerateComposite(event)">
+                <div style="margin-bottom: 14px;">
+                  <label style="font-weight: 600; font-size: 0.85rem; display: block; margin-bottom: 6px;">Natural Language Prompt</label>
+                  <textarea class="textarea-clay" id="comp-prompt" rows="3" required>Create an image containing one red apple and one orange</textarea>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px;">
+                  <div>
+                    <label style="font-weight: 600; font-size: 0.82rem; display: block; margin-bottom: 4px;">Canvas Width</label>
+                    <select class="select-clay" id="comp-w">
+                      <option value="1000" selected>1000 px</option>
+                      <option value="1100">1100 px</option>
+                      <option value="800">800 px</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label style="font-weight: 600; font-size: 0.82rem; display: block; margin-bottom: 4px;">Canvas Height</label>
+                    <select class="select-clay" id="comp-h">
+                      <option value="600" selected>600 px</option>
+                      <option value="650">650 px</option>
+                      <option value="500">500 px</option>
+                    </select>
+                  </div>
+                </div>
+                <div style="margin-bottom: 18px;">
+                  <label style="display: flex; align-items: center; gap: 8px; font-size: 0.88rem; cursor: pointer;">
+                    <input type="checkbox" id="comp-verify" checked>
+                    <span>Execute closed-loop detector verification pass (--verify)</span>
+                  </label>
+                </div>
+                <button type="submit" class="btn-clay btn-primary" id="btn-compose-submit">Assemble Composite</button>
+              </form>
+            </div>
+            <div class="clay-card">
+              <h4 style="margin-bottom: 12px;">Composite Output & Provenance</h4>
+              <div class="canvas-frame">
+                <img id="img-composite-result" src="" style="max-height: 280px; display: none;">
+                <span id="txt-comp-placeholder" style="color: var(--ink-muted); font-size: 0.88rem;">No composite generated yet</span>
+              </div>
+              <div id="comp-provenance-box" class="clay-well" style="margin-top: 14px; font-size: 0.82rem; display: none;">
+                <!-- Populated via JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detection Sandbox Sub-tab -->
+        <div id="q1-tab-explore" style="display: none;">
+          <div class="clay-card">
+            <h3 style="margin-bottom: 8px;">Ad-Hoc Detection Sandbox</h3>
+            <p style="color: var(--ink-muted); font-size: 0.88rem; margin-bottom: 16px;">
+              Upload any test image to evaluate raw multi-modal segmentation and bounding box extraction.
+            </p>
+            <input type="file" class="input-clay" id="sandbox-file" accept="image/png, image/jpeg" style="max-width: 400px;" onchange="handleSandboxFile(event)">
+            <div class="split-grid" style="margin-top: 20px;">
+              <div class="canvas-frame">
+                <canvas id="sandbox-canvas"></canvas>
+              </div>
+              <div class="clay-well" id="sandbox-results" style="font-size: 0.85rem;">
+                Select an image above to run segmentation analysis.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           QUESTION 2 SECTION
+           ==================================================================== -->
+      <section id="view-q2" style="display: none;">
+        <!-- Sub-Tabs Strip -->
+        <div class="tab-strip">
+          <button class="tab-btn active" onclick="switchQ2Tab('bank', this)">Question Bank</button>
+          <button class="tab-btn" onclick="switchQ2Tab('check', this)">Duplicate Checker</button>
+          <button class="tab-btn" onclick="switchQ2Tab('generate', this)">Question Generator</button>
+          <button class="tab-btn" onclick="switchQ2Tab('eval', this)">Ground Truth Evaluation (Q1-Q10)</button>
+          <button class="tab-btn" onclick="switchQ2Tab('scale', this)">Scale & Calibration Benchmark</button>
+        </div>
+
+        <!-- Question Bank Sub-tab -->
+        <div id="q2-tab-bank">
+          <div class="metrics-grid">
+            <div class="metric-unit">
+              <div class="metric-label">Stored Questions</div>
+              <div class="metric-value" id="m-q2-total">0</div>
+            </div>
+            <div class="metric-unit">
+              <div class="metric-label">Subject Concepts</div>
+              <div class="metric-value" id="m-q2-concepts">0</div>
+            </div>
+            <div class="metric-unit">
+              <div class="metric-label">Dynamic Tags Logged</div>
+              <div class="metric-value" id="m-q2-tags">0</div>
+            </div>
+          </div>
+
+          <div class="clay-card">
+            <h3 style="margin-bottom: 14px;">Active Question Bank Datastore</h3>
+            <div style="overflow-x: auto;">
+              <table class="table-clay" id="table-q2-bank">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Concept</th>
+                    <th>Question Content</th>
+                    <th>Metadata Tags</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Populated via JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Duplicate Checker Sub-tab -->
+        <div id="q2-tab-check" style="display: none;">
+          <div class="split-grid">
+            <div class="clay-card">
+              <h3 style="margin-bottom: 12px;">Multi-Stage Duplicate Discriminator</h3>
+              <p style="color: var(--ink-muted); font-size: 0.88rem; margin-bottom: 14px;">
+                Evaluates candidate text against active corpus via exact canonical keys, numeric invariants, intent taxonomy, and dense vector distance.
+              </p>
+              <div style="margin-bottom: 12px;">
+                <label style="font-weight: 600; font-size: 0.82rem; display: block; margin-bottom: 4px;">Candidate Question Text</label>
+                <textarea class="textarea-clay" id="check-cand-text" rows="3">Define the reflection of light.</textarea>
+              </div>
+              <div style="margin-bottom: 16px;">
+                <label style="font-weight: 600; font-size: 0.82rem; display: block; margin-bottom: 4px;">Optional Baseline (Pairwise Check)</label>
+                <input type="text" class="input-clay" id="check-base-text" placeholder="Leave empty to check against entire bank, or type baseline question">
+              </div>
+              <div style="margin-bottom: 16px;">
+                <label style="font-weight: 600; font-size: 0.82rem; display: block; margin-bottom: 4px;">Preset Benchmark Queries</label>
+                <select class="select-clay" onchange="loadPresetCheck(this.value)">
+                  <option value="">(Select benchmark query)</option>
+                  <option value="What is reflection of light?">What is reflection of light?</option>
+                  <option value="Define the reflection of light.">Define the reflection of light.</option>
+                  <option value="State the laws of reflection of light.">State the laws of reflection of light.</option>
+                  <option value="What is a concave mirror?|What is a convex mirror?">Pairwise: Concave vs Convex mirror</option>
+                  <option value="The angle of incidence is 30°. What is the angle of reflection?|The angle of incidence is 55°. What is the angle of reflection?">Pairwise: 30° vs 55° Angle problem</option>
+                  <option value="What is reflection?">What is reflection? (Scope Ambiguity Case)</option>
+                </select>
+              </div>
+              <button class="btn-clay btn-primary" onclick="executeDuplicateCheck()">Execute Analysis</button>
+            </div>
+
+            <div class="clay-card">
+              <h4 style="margin-bottom: 12px;">Discriminator Resolution</h4>
+              <div class="gauge-container">
+                <div class="gauge-meter">
+                  <div class="gauge-needle" id="gauge-needle"></div>
+                  <div class="gauge-center">
+                    <span class="gauge-val-text" id="gauge-val">0%</span>
+                  </div>
+                </div>
+              </div>
+              <div id="check-result-box" class="clay-well" style="margin-top: 14px; font-size: 0.85rem;">
+                Awaiting query analysis...
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question Generator Sub-tab -->
+        <div id="q2-tab-generate" style="display: none;">
+          <div class="split-grid">
+            <div class="clay-card">
+              <h3 style="margin-bottom: 12px;">Avoidance Generation Pipeline</h3>
+              <p style="color: var(--ink-muted); font-size: 0.88rem; margin-bottom: 14px;">
+                Compresses existing bank into concept clusters under an O(1) token budget (~1,200 tokens) with in-loop multi-round rejection steering.
+              </p>
+              <div style="margin-bottom: 12px;">
+                <label style="font-weight: 600; font-size: 0.82rem; display: block; margin-bottom: 4px;">Core Concept Domain</label>
+                <input type="text" class="input-clay" id="gen-concept" value="reflection of light">
+              </div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px;">
+                <div>
+                  <label style="font-weight: 600; font-size: 0.82rem; display: block; margin-bottom: 4px;">Question Count</label>
+                  <input type="number" class="input-clay" id="gen-count" value="3" min="1" max="6">
+                </div>
+                <div>
+                  <label style="font-weight: 600; font-size: 0.82rem; display: block; margin-bottom: 4px;">MMR Limit (k)</label>
+                  <input type="number" class="input-clay" id="gen-k" value="4" min="2" max="8">
+                </div>
+              </div>
+              <button class="btn-clay btn-primary" onclick="executeQuestionGeneration()">Generate Questions</button>
+            </div>
+
+            <div class="clay-card" style="max-height: 540px; overflow-y: auto;">
+              <h4 style="margin-bottom: 12px;">Generation & Safeguard Output</h4>
+              <div id="gen-results-box" class="clay-well" style="font-size: 0.85rem;">
+                Click generate to trigger avoidance workflow.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Evaluation Metrics Sub-tab -->
+        <div id="q2-tab-eval" style="display: none;">
+          <div class="clay-card">
+            <h3 style="margin-bottom: 12px;">Held-Out Ground Truth Benchmark (Q1-Q10)</h3>
+            <div class="metrics-grid" style="margin-bottom: 18px;">
+              <div class="metric-unit">
+                <div class="metric-label">Accuracy</div>
+                <div class="metric-value">100.0%</div>
+              </div>
+              <div class="metric-unit">
+                <div class="metric-label">Duplicate Precision</div>
+                <div class="metric-value">1.000</div>
+              </div>
+              <div class="metric-unit">
+                <div class="metric-label">Duplicate Recall</div>
+                <div class="metric-value">1.000</div>
+              </div>
+              <div class="metric-unit">
+                <div class="metric-label">F1 Score</div>
+                <div class="metric-value">1.000</div>
+              </div>
+            </div>
+
+            <div style="overflow-x: auto;">
+              <table class="table-clay" id="table-q2-eval">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Question</th>
+                    <th>Expected</th>
+                    <th>Predicted</th>
+                    <th>Status</th>
+                    <th>Similarity</th>
+                    <th>Discriminator Stage</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Populated via JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scale & Calibration Benchmark Sub-tab -->
+        <div id="q2-tab-scale" style="display: none;">
+          <div class="split-grid">
+            <div class="clay-card">
+              <h3 style="margin-bottom: 12px;">60-Pair Multi-Disciplinary Calibration Set</h3>
+              <p style="color: var(--ink-muted); font-size: 0.85rem; margin-bottom: 14px;">
+                Evaluates hard negatives across Physics, Chemistry, Biology, and Mechanics.
+              </p>
+              <div class="metrics-grid">
+                <div class="metric-unit">
+                  <div class="metric-label">Accuracy</div>
+                  <div class="metric-value" id="m-calib-acc">98.3%</div>
+                </div>
+                <div class="metric-unit">
+                  <div class="metric-label">Precision</div>
+                  <div class="metric-value" id="m-calib-prec">100.0%</div>
+                </div>
+                <div class="metric-unit">
+                  <div class="metric-label">Silent Misses</div>
+                  <div class="metric-value" id="m-calib-misses">0</div>
+                </div>
+              </div>
+              <div id="calib-table-box" style="margin-top: 14px; max-height: 280px; overflow-y: auto;">
+                <!-- Populated via JS -->
+              </div>
+            </div>
+
+            <div class="clay-card">
+              <h3 style="margin-bottom: 12px;">Vector Bank Retrieval Scale Benchmark</h3>
+              <p style="color: var(--ink-muted); font-size: 0.85rem; margin-bottom: 14px;">
+                Empirical latency measured on exact cosine search as collection scales to 100,000 vectors.
+              </p>
+              <div style="overflow-x: auto;">
+                <table class="table-clay" id="table-q2-scale">
+                  <thead>
+                    <tr>
+                      <th>Collection Size</th>
+                      <th>Lookup Latency</th>
+                      <th>Throughput</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>1,000 questions</td><td>0.124 ms</td><td>8,082 QPS</td></tr>
+                    <tr><td>10,000 questions</td><td>1.464 ms</td><td>683 QPS</td></tr>
+                    <tr><td>50,000 questions</td><td>5.976 ms</td><td>167 QPS</td></tr>
+                    <tr><td>100,000 questions</td><td>11.080 ms</td><td>90 QPS</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Privacy Policy Modal Dialog -->
+  <div class="modal-backdrop" id="modal-policy" onclick="closePolicyModal(event)">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h2 style="font-size: 1.35rem; font-weight: 700; color: var(--ink-primary);">Privacy Policy & Data Governance Specification</h2>
+        <button class="btn-clay" onclick="closePolicyModal(event)" style="padding: 4px 12px;">Close</button>
+      </div>
+      <div style="font-size: 0.88rem; color: var(--ink-secondary); line-height: 1.65;">
+        <h4 style="color: var(--ink-primary); margin-top: 12px;">1. On-Device Execution Isolation</h4>
+        <p>All algorithms, contour segmentations, and semantic projection routines execute exclusively in local CPU/GPU memory on the host computer. Zero telemetry, cookies, or tracking payloads are emitted.</p>
+
+        <h4 style="color: var(--ink-primary); margin-top: 14px;">2. Non-Hallucination Asset Provenance</h4>
+        <p>In accordance with assignment requirements, image composition utilizes authenticated cutouts from existing catalog assets. Synthesized approximations and generative pixel fills are strictly disabled (generative_fill: false).</p>
+
+        <h4 style="color: var(--ink-primary); margin-top: 14px;">3. Cryptographic Manual Edit Protection</h4>
+        <p>Manual annotations saved by users are quarantined from automated detector outputs. Automated re-runs cannot overwrite user edits without an explicit administrative force flag (ProtectedObjectsError).</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
