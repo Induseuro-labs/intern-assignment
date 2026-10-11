@@ -1,8 +1,15 @@
 # Induseuro-Labs Intern Assignment: Advanced Multi-Modal Catalog & AI Question Platform
 
+> **Candidate:** Shivshankar Mali ([@shiv123-coder](https://github.com/shiv123-coder))  
+> **Repository Fork:** [github.com/shiv123-coder/intern-assignment](https://github.com/shiv123-coder/intern-assignment)  
+> **Official Pull Request:** [Induseuro-labs/intern-assignment #4](https://github.com/Induseuro-labs/intern-assignment/pull/4)  
+> **Release Tag:** [v1.0.0](https://github.com/shiv123-coder/intern-assignment/releases/tag/v1.0.0)  
+> **Cloud Deployment (Render):** [intern-assignment.onrender.com](https://intern-assignment.onrender.com)  
+
 A comprehensive, production-grade implementation of both assignment challenges:
 1. **Question 1:** Multi-Modal Image Catalog, Occlusion-Aware Object Detection, Source-of-Truth Metadata Management, and Natural Language Compositor with Closed-Loop Verification.
 2. **Question 2:** AI Question Generation with Agglomerative Concept Avoidance, Token Budgeting, and Independent Multi-Stage Safeguard Duplicate Detection.
+3. **Engineering Console:** Tactile Skeuomorphic and Claymorphic Web Console running natively on FastAPI (port 8000), Streamlit (port 8501), and Docker on Render.
 
 ---
 
@@ -203,11 +210,18 @@ Induseuro-labs-intern-assignment/
 ├── cli.py                                   # Unified command-line interface
 ├── run_all_demos.py                         # Master verification demo runner
 ├── requirements.txt                         # Python dependencies
-├── app/                                     # Multi-page interactive Streamlit UI
-│   ├── streamlit_app.py                     # Main dashboard entry point
-│   ├── pages/
-│   │   ├── q1_image_catalog.py              # Q1 UI (Catalog, Editor, Compositor)
-│   │   └── q2_duplicate_prevention.py       # Q2 UI (Checker, Generator, Metrics)
+├── Dockerfile                               # Production Docker container specification
+├── render.yaml                              # Render 1-click cloud blueprint
+├── Procfile                                 # PaaS process definition
+├── app/                                     # Engineering Console Web Application
+│   ├── server.py                            # FastAPI backend REST API
+│   ├── static/                              # Tactile Skeuomorphic & Claymorphic frontend
+│   │   ├── index.html                       # Tactile console markup
+│   │   ├── styles.css                       # Skeuomorphic & claymorphic CSS tokens
+│   │   ├── app.js                           # Interactive JavaScript controller
+│   │   └── favicon.svg                      # Custom optical lens favicon
+│   ├── streamlit_app.py                     # Streamlit entry point (port 8501)
+│   ├── pages/                               # Streamlit secondary pages
 │   └── utils/
 │       └── visualizer.py                    # Bounding box & annotation renderer
 ├── question_1_image_catalog/
