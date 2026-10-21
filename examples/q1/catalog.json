@@ -1,0 +1,1281 @@
+[
+  {
+    "id": "e9f84262482b",
+    "name": "apple",
+    "auto": {
+      "width": 400,
+      "height": 400,
+      "format": "PNG",
+      "sha256": "25b3726b76af78ac58343ed8369d2b62fd63724df45344704074992c8901a020",
+      "kind": "upload",
+      "created_at": "2026-10-21T02:05:43+00:00",
+      "file": "C:\\Users\\Lahari\\AppData\\Local\\Temp\\tmp0013c92z\\catalog\\images\\e9f84262482b.png",
+      "provenance": null,
+      "detection": {
+        "status": "detected",
+        "backend": "classical-cv-v1",
+        "error": null,
+        "ran_at": "2026-10-21T02:05:44+00:00",
+        "runs": 2
+      }
+    },
+    "user": {
+      "display_name": "apple",
+      "description": "A single red apple on a white background",
+      "tags": {
+        "set": "section-6"
+      }
+    },
+    "corrected": true,
+    "objects": [
+      {
+        "id": "778bfa16febf",
+        "origin": "detector",
+        "detector": "classical-cv-v1",
+        "edited_by_user": true,
+        "label": "apple",
+        "display_name": "dark red apple",
+        "color": "dark red",
+        "confidence": 0.78,
+        "bbox": {
+          "x": 85,
+          "y": 75,
+          "w": 231,
+          "h": 261
+        },
+        "attributes": {
+          "shape": "circle",
+          "colors": [
+            "red"
+          ],
+          "method": "shape fit"
+        },
+        "auto_original": {
+          "label": "apple",
+          "color": "red",
+          "confidence": 0.78,
+          "x": 90,
+          "y": 80,
+          "w": 221,
+          "h": 251
+        }
+      },
+      {
+        "id": "d3ac383e23aa",
+        "origin": "detector",
+        "detector": "classical-cv-v1",
+        "edited_by_user": false,
+        "label": "apple",
+        "display_name": "red apple",
+        "color": "red",
+        "confidence": 0.78,
+        "bbox": {
+          "x": 90,
+          "y": 80,
+          "w": 221,
+          "h": 251
+        },
+        "attributes": {
+          "shape": "circle",
+          "colors": [
+            "red"
+          ],
+          "method": "shape fit"
+        },
+        "auto_original": null
+      }
+    ]
+  },
+  {
+    "id": "59c03c14f567",
+    "name": "apple_and_orange",
+    "auto": {
+      "width": 357,
+      "height": 206,
+      "format": "PNG",
+      "sha256": "49423de2642ffd5d4b9b882ad5442b008648d1be74e646f70659c07f95f30be2",
+      "kind": "composite",
+      "created_at": "2026-10-21T02:05:44+00:00",
+      "file": "C:\\Users\\Lahari\\AppData\\Local\\Temp\\tmp0013c92z\\catalog\\images\\59c03c14f567.png",
+      "provenance": {
+        "request": "Create an image containing one red apple and one orange",
+        "parser": "rules",
+        "items": [
+          {
+            "term": "apple",
+            "count": 1,
+            "color": "red"
+          },
+          {
+            "term": "orange",
+            "count": 1,
+            "color": null
+          }
+        ],
+        "layout": "row, bottom-aligned, size prior per category",
+        "generated_pixels": false,
+        "sources": [
+          {
+            "image_id": "e9f84262482b",
+            "image_name": "apple",
+            "object_id": "d3ac383e23aa",
+            "label": "apple",
+            "source_bbox": {
+              "x": 90,
+              "y": 80,
+              "w": 221,
+              "h": 251
+            },
+            "scale": 0.502,
+            "placed_bbox": {
+              "x": 40,
+              "y": 40,
+              "w": 111,
+              "h": 126
+            },
+            "z": 0
+          },
+          {
+            "image_id": "b492be21009e",
+            "image_name": "orange",
+            "object_id": "b3fc6bb34332",
+            "label": "orange",
+            "source_bbox": {
+              "x": 90,
+              "y": 100,
+              "w": 221,
+              "h": 221
+            },
+            "scale": 0.57,
+            "placed_bbox": {
+              "x": 191,
+              "y": 40,
+              "w": 126,
+              "h": 126
+            },
+            "z": 1
+          }
+        ]
+      },
+      "detection": {
+        "status": "detected",
+        "backend": "compose-v1",
+        "error": null,
+        "ran_at": null,
+        "runs": 0
+      }
+    },
+    "user": {
+      "display_name": "apple_and_orange",
+      "description": "Create an image containing one red apple and one orange",
+      "tags": {
+        "generated": "composite"
+      }
+    },
+    "corrected": false,
+    "objects": [
+      {
+        "id": "09c20e780d14",
+        "origin": "composer",
+        "detector": "compose-v1",
+        "edited_by_user": false,
+        "label": "apple",
+        "display_name": "apple",
+        "color": "red",
+        "confidence": 1.0,
+        "bbox": {
+          "x": 40,
+          "y": 40,
+          "w": 111,
+          "h": 126
+        },
+        "attributes": {
+          "source_image": "apple",
+          "source_object": "d3ac383e23aa"
+        },
+        "auto_original": null
+      },
+      {
+        "id": "4fe8b2c534d6",
+        "origin": "composer",
+        "detector": "compose-v1",
+        "edited_by_user": false,
+        "label": "orange",
+        "display_name": "orange",
+        "color": "orange",
+        "confidence": 1.0,
+        "bbox": {
+          "x": 191,
+          "y": 40,
+          "w": 126,
+          "h": 126
+        },
+        "attributes": {
+          "source_image": "orange",
+          "source_object": "b3fc6bb34332"
+        },
+        "auto_original": null
+      }
+    ]
+  },
+  {
+    "id": "eea98bdbd2ba",
+    "name": "apple_orange",
+    "auto": {
+      "width": 800,
+      "height": 400,
+      "format": "PNG",
+      "sha256": "8c077bb07aca7eb8e5d15b5696707921bd01d8aa9a74c6aaaeab9e841c403599",
+      "kind": "upload",
+      "created_at": "2026-10-21T02:05:44+00:00",
+      "file": "C:\\Users\\Lahari\\AppData\\Local\\Temp\\tmp0013c92z\\catalog\\images\\eea98bdbd2ba.png",
+      "provenance": null,
+      "detection": {
+        "status": "detected",
+        "backend": "classical-cv-v1",
+        "error": null,
+        "ran_at": "2026-10-21T02:05:44+00:00",
+        "runs": 2
+      }
+    },
+    "user": {
+      "display_name": "apple_orange",
+      "description": "An apple beside an orange",
+      "tags": {
+        "set": "section-6"
+      }
+    },
+    "corrected": false,
+    "objects": [
+      {
+        "id": "5b17756e61d2",
+        "origin": "detector",
+        "detector": "classical-cv-v1",
+        "edited_by_user": false,
+        "label": "apple",
+        "display_name": "red apple",
+        "color": "red",
+        "confidence": 0.78,
+        "bbox": {
+          "x": 90,
+          "y": 80,
+          "w": 221,
+          "h": 251
+        },
+        "attributes": {
+          "shape": "circle",
+          "colors": [
+            "red"
+          ],
+          "method": "shape fit"
+        },
+        "auto_original": null
+      },
+      {
+        "id": "250c256b99c3",
+        "origin": "detector",
+        "detector": "classical-cv-v1",
+        "edited_by_user": false,
+        "label": "orange",
+        "display_name": "orange orange",
+        "color": "orange",
+        "confidence": 0.85,
+        "bbox": {
+          "x": 470,
+          "y": 100,
+          "w": 221,
+          "h": 221
+        },
+        "attributes": {
+          "shape": "circle",
+          "colors": [
+            "orange"
+          ],
+          "method": "shape fit"
+        },
+        "auto_original": null
+      }
+    ]
+  },
+  {
+    "id": "78d4a0dd49cf",
+    "name": "blank",
+    "auto": {
+      "width": 400,
+      "height": 400,
+      "format": "PNG",
+      "sha256": "8cf7fdeb3d441e1a03017497d0aa77ed63ab9cc0c872ffd71fb040775fced0ee",
+      "kind": "upload",
+      "created_at": "2026-10-21T02:05:44+00:00",
+      "file": "C:\\Users\\Lahari\\AppData\\Local\\Temp\\tmp0013c92z\\catalog\\images\\78d4a0dd49cf.png",
+      "provenance": null,
+      "detection": {
+        "status": "no_objects",
+        "backend": "classical-cv-v1",
+        "error": null,
+        "ran_at": "2026-10-21T02:05:44+00:00",
+        "runs": 2
+      }
+    },
+    "user": {
+      "display_name": "blank",
+      "description": "Empty white image - nothing to detect",
+      "tags": {
+        "set": "section-6"
+      }
+    },
+    "corrected": false,
+    "objects": []
+  },
+  {
+    "id": "a72111bb38c9",
+    "name": "boy",
+    "auto": {
+      "width": 400,
+      "height": 420,
+      "format": "PNG",
+      "sha256": "74a62396fdd0ddc7b5d9a1e12d76d65365b0d034497d4da7ea8d19e0f394a16e",
+      "kind": "upload",
+      "created_at": "2026-10-21T02:05:44+00:00",
+      "file": "C:\\Users\\Lahari\\AppData\\Local\\Temp\\tmp0013c92z\\catalog\\images\\a72111bb38c9.png",
+      "provenance": null,
+      "detection": {
+        "status": "detected",
+        "backend": "classical-cv-v1",
+        "error": null,
+        "ran_at": "2026-10-21T02:05:44+00:00",
+        "runs": 1
+      }
+    },
+    "user": {
+      "display_name": "boy",
+      "description": "A cartoon boy standing",
+      "tags": {
+        "set": "section-6"
+      }
+    },
+    "corrected": true,
+    "objects": [
+      {
+        "id": "c98b70efdf1f",
+        "origin": "detector",
+        "detector": "classical-cv-v1",
+        "edited_by_user": true,
+        "label": "boy",
+        "display_name": "boy",
+        "color": "blue",
+        "confidence": 0.99,
+        "bbox": {
+          "x": 120,
+          "y": 46,
+          "w": 161,
+          "h": 333
+        },
+        "attributes": {
+          "colors": [
+            "blue"
+          ],
+          "method": "skin+multi-region heuristic"
+        },
+        "auto_original": {
+          "label": "person",
+          "color": "blue",
+          "confidence": 0.6,
+          "x": 120,
+          "y": 46,
+          "w": 161,
+          "h": 333
+        }
+      }
+    ]
+  },
+  {
+    "id": "99117d4d7bec",
+    "name": "cluttered",
+    "auto": {
+      "width": 400,
+      "height": 400,
+      "format": "PNG",
+      "sha256": "627a7e61515fb9a76b345c9f5b7305f2e3bab507e607a0ccf848cd20c76fa50f",
+      "kind": "upload",
+      "created_at": "2026-10-21T02:05:44+00:00",
+      "file": "C:\\Users\\Lahari\\AppData\\Local\\Temp\\tmp0013c92z\\catalog\\images\\99117d4d7bec.png",
+      "provenance": null,
+      "detection": {
+        "status": "failed",
+        "backend": "classical-cv-v1",
+        "error": "non-uniform background (border spread 67 > 25); classical segmentation unreliable - add objects manually or use the vision backend",
+        "ran_at": "2026-10-21T02:05:44+00:00",
+        "runs": 1
+      }
+    },
+    "user": {
+      "display_name": "cluttered",
+      "description": "Apple on a noisy, photo-like background - expected detector failure",
+      "tags": {
+        "set": "section-6"
+      }
+    },
+    "corrected": true,
+    "objects": [
+      {
+        "id": "7addf0057307",
+        "origin": "user",
+        "detector": null,
+        "edited_by_user": false,
+        "label": "apple",
+        "display_name": "red apple",
+        "color": "red",
+        "confidence": 1.0,
+        "bbox": {
+          "x": 110,
+          "y": 100,
+          "w": 181,
+          "h": 211
+        },
+        "attributes": {},
+        "auto_original": null
+      }
+    ]
+  },
+  {
+    "id": "73639d9e49bb",
+    "name": "colors",
+    "auto": {
+      "width": 720,
+      "height": 200,
+      "format": "PNG",
+      "sha256": "9a94154151c8dc031636d6e31f6059613c39c61de8a677601c7657f28a253a50",
+      "kind": "upload",
+      "created_at": "2026-10-21T02:05:44+00:00",
+      "file": "C:\\Users\\Lahari\\AppData\\Local\\Temp\\tmp0013c92z\\catalog\\images\\73639d9e49bb.png",
+      "provenance": null,
+      "detection": {
+        "status": "detected",
+        "backend": "classical-cv-v1",
+        "error": null,
+        "ran_at": "2026-10-21T02:05:44+00:00",
+        "runs": 2
+      }
+    },
+    "user": {
+      "display_name": "colors",
+      "description": "Red, blue, green, yellow, and purple color swatches",
+      "tags": {
+        "set": "section-6"
+      }
+    },
+    "corrected": false,
+    "objects": [
+      {
+        "id": "e95a5f7d7737",
+        "origin": "detector",
+        "detector": "classical-cv-v1",
+        "edited_by_user": false,
+        "label": "square",
+        "display_name": "red square",
+        "color": "red",
+        "confidence": 1.0,
+        "bbox": {
+          "x": 30,
+          "y": 50,
+          "w": 101,
+          "h": 101
+        },
+        "attributes": {
+          "shape": "square",
+          "colors": [
+            "red"
+          ],
+          "method": "shape fit"
+        },
+        "auto_original": null
+      },
+      {
+        "id": "204874bf2458",
+        "origin": "detector",
+        "detector": "classical-cv-v1",
+        "edited_by_user": false,
+        "label": "square",
+        "display_name": "blue square",
+        "color": "blue",
+        "confidence": 1.0,
+        "bbox": {
+          "x": 165,
+          "y": 50,
+          "w": 101,
+          "h": 101
+        },
+        "attributes": {
+          "shape": "square",
+          "colors": [
+            "blue"
+          ],
+          "method": "shape fit"
+        },
+        "auto_original": null
+      },
+      {
+        "id": "68ef1a172870",
+        "origin": "detector",
+        "detector": "classical-cv-v1",
+        "edited_by_user": false,
+        "label": "square",
+        "display_name": "green square",
+        "color": "green",
+        "confidence": 1.0,
+        "bbox": {
+          "x": 300,
+          "y": 50,
+          "w": 101,
+          "h": 101
+        },
+        "attributes": {
+          "shape": "square",
+          "colors": [
+            "green"
+          ],
+          "method": "shape fit"
+        },
+        "auto_original": null
+      },
+      {
+        "id": "ec6c02953d83",
+        "origin": "detector",
+        "detector": "classical-cv-v1",
+        "edited_by_user": false,
+        "label": "square",
+        "display_name": "yellow square",
+        "color": "yellow",
+        "confidence": 1.0,
+        "bbox": {
+          "x": 435,
+          "y": 50,
+          "w": 101,
+          "h": 101
+        },
+        "attributes": {
+          "shape": "square",
+          "colors": [
+            "yellow"
+          ],
+          "method": "shape fit"
+        },
+        "auto_original": null
+      },
+      {
+        "id": "34c55813e2d8",
+        "origin": "detector",
+        "detector": "classical-cv-v1",
+        "edited_by_user": false,
+        "label": "square",
+        "display_name": "purple square",
+        "color": "purple",
+        "confidence": 1.0,
+        "bbox": {
+          "x": 570,
+          "y": 50,
+          "w": 101,
+          "h": 101
+        },
+        "attributes": {
+          "shape": "square",
+          "colors": [
+            "purple"
+          ],
+          "method": "shape fit"
+        },
+        "auto_original": null
+      }
+    ]
+  },
+  {
+    "id": "68e6806ca8bb",
+    "name": "faint",
+    "auto": {
+      "width": 400,
+      "height": 400,
+      "format": "PNG",
+      "sha256": "b971a74b615a6380391d6e089bd9e88eca4d668e68ec1bc5f94e102ecc9f0fe9",
+      "kind": "upload",
+      "created_at": "2026-10-21T02:05:44+00:00",
+      "file": "C:\\Users\\Lahari\\AppData\\Local\\Temp\\tmp0013c92z\\catalog\\images\\68e6806ca8bb.png",
+      "provenance": null,
+      "detection": {
+        "status": "no_objects",
+        "backend": "classical-cv-v1",
+        "error": null,
+        "ran_at": "2026-10-21T02:05:44+00:00",
+        "runs": 1
+      }
+    },
+    "user": {
+      "display_name": "faint",
+      "description": "A near-white circle on white - expected detector miss",
+      "tags": {
+        "set": "section-6"
+      }
+    },
+    "corrected": true,
+    "objects": [
+      {
+        "id": "b0751f68219f",
+        "origin": "user",
+        "detector": null,
+        "edited_by_user": false,
+        "label": "circle",
+        "display_name": "white circle",
+        "color": "white",
+        "confidence": 1.0,
+        "bbox": {
+          "x": 100,
+          "y": 100,
+          "w": 201,
+          "h": 201
+        },
+        "attributes": {},
+        "auto_original": null
+      }
+    ]
+  },
+  {
+    "id": "58f7acb7e084",
+    "name": "girl",
+    "auto": {
+      "width": 400,
+      "height": 420,
+      "format": "PNG",
+      "sha256": "8ae502c402975c2cf6f5f96ecd3e18514dac83641aabcc6e0e45187a26c4fb1d",
+      "kind": "upload",
+      "created_at": "2026-10-21T02:05:44+00:00",
+      "file": "C:\\Users\\Lahari\\AppData\\Local\\Temp\\tmp0013c92z\\catalog\\images\\58f7acb7e084.png",
+      "provenance": null,
+      "detection": {
+        "status": "detected",
+        "backend": "classical-cv-v1",
+        "error": null,
+        "ran_at": "2026-10-21T02:05:44+00:00",
+        "runs": 1
+      }
+    },
+    "user": {
+      "display_name": "girl",
+      "description": "A cartoon girl standing",
+      "tags": {
+        "set": "section-6"
+      }
+    },
+    "corrected": true,
+    "objects": [
+      {
+        "id": "67377565244c",
+        "origin": "detector",
+        "detector": "classical-cv-v1",
+        "edited_by_user": true,
+        "label": "girl",
+        "display_name": "girl",
+        "color": "pink",
+        "confidence": 0.99,
+        "bbox": {
+          "x": 110,
+          "y": 40,
+          "w": 181,
+          "h": 346
+        },
+        "attributes": {
+          "colors": [
+            "brown",
+            "pink"
+          ],
+          "method": "skin+multi-region heuristic"
+        },
+        "auto_original": {
+          "label": "person",
+          "color": "pink",
+          "confidence": 0.6,
+          "x": 110,
+          "y": 40,
+          "w": 181,
+          "h": 346
+        }
+      }
+    ]
+  },
+  {
+    "id": "b492be21009e",
+    "name": "orange",
+    "auto": {
+      "width": 400,
+      "height": 400,
+      "format": "PNG",
+      "sha256": "fc0f4a3ae584299e28926ee162754c891121feb1c30d5b33e27eca16a7b9c76e",
+      "kind": "upload",
+      "created_at": "2026-10-21T02:05:44+00:00",
+      "file": "C:\\Users\\Lahari\\AppData\\Local\\Temp\\tmp0013c92z\\catalog\\images\\b492be21009e.png",
+      "provenance": null,
+      "detection": {
+        "status": "detected",
+        "backend": "classical-cv-v1",
+        "error": null,
+        "ran_at": "2026-10-21T02:05:44+00:00",
+        "runs": 2
+      }
+    },
+    "user": {
+      "display_name": "orange",
+      "description": "A single orange fruit on a white background",
+      "tags": {
+        "set": "section-6"
+      }
+    },
+    "corrected": false,
+    "objects": [
+      {
+        "id": "b3fc6bb34332",
+        "origin": "detector",
+        "detector": "classical-cv-v1",
+        "edited_by_user": false,
+        "label": "orange",
+        "display_name": "orange orange",
+        "color": "orange",
+        "confidence": 0.85,
+        "bbox": {
+          "x": 90,
+          "y": 100,
+          "w": 221,
+          "h": 221
+        },
+        "attributes": {
+          "shape": "circle",
+          "colors": [
+            "orange"
+          ],
+          "method": "shape fit"
+        },
+        "auto_original": null
+      }
+    ]
+  },
+  {
+    "id": "a65a85df32a9",
+    "name": "overlapping_shapes",
+    "auto": {
+      "width": 520,
+      "height": 400,
+      "format": "PNG",
+      "sha256": "d57ab2ed0b9f791f5b541ef16d4cd5ceef629cdd24eb8dfc9c09354201dd42cb",
+      "kind": "upload",
+      "created_at": "2026-10-21T02:05:44+00:00",
+      "file": "C:\\Users\\Lahari\\AppData\\Local\\Temp\\tmp0013c92z\\catalog\\images\\a65a85df32a9.png",
+      "provenance": null,
+      "detection": {
+        "status": "detected",
+        "backend": "classical-cv-v1",
+        "error": null,
+        "ran_at": "2026-10-21T02:05:44+00:00",
+        "runs": 2
+      }
+    },
+    "user": {
+      "display_name": "overlapping_shapes",
+      "description": "Overlapping colored geometric shapes",
+      "tags": {
+        "set": "section-6"
+      }
+    },
+    "corrected": false,
+    "objects": [
+      {
+        "id": "31bae2aa09a1",
+        "origin": "detector",
+        "detector": "classical-cv-v1",
+        "edited_by_user": false,
+        "label": "circle",
+        "display_name": "red circle",
+        "color": "red",
+        "confidence": 0.8,
+        "bbox": {
+          "x": 60,
+          "y": 80,
+          "w": 192,
+          "h": 201
+        },
+        "attributes": {
+          "overlapping": true,
+          "method": "colour split + shape fit"
+        },
+        "auto_original": null
+      },
+      {
+        "id": "b35c3f3c20ef",
+        "origin": "detector",
+        "detector": "classical-cv-v1",
+        "edited_by_user": false,
+        "label": "square",
+        "display_name": "blue square",
+        "color": "blue",
+        "confidence": 0.89,
+        "bbox": {
+          "x": 200,
+          "y": 140,
+          "w": 161,
+          "h": 161
+        },
+        "attributes": {
+          "overlapping": true,
+          "method": "colour split + shape fit"
+        },
+        "auto_original": null
+      },
+      {
+        "id": "3e394b02d9cf",
+        "origin": "detector",
+        "detector": "classical-cv-v1",
+        "edited_by_user": false,
+        "label": "triangle",
+        "display_name": "green triangle",
+        "color": "green",
+        "confidence": 1.0,
+        "bbox": {
+          "x": 300,
+          "y": 92,
+          "w": 180,
+          "h": 169
+        },
+        "attributes": {
+          "overlapping": true,
+          "method": "colour split + shape fit"
+        },
+        "auto_original": null
+      }
+    ]
+  },
+  {
+    "id": "2acee089a699",
+    "name": "shapes",
+    "auto": {
+      "width": 860,
+      "height": 300,
+      "format": "PNG",
+      "sha256": "98bdfff9790540ed77a9297f3957d331d9b63421183729daf27c1f18188ff129",
+      "kind": "upload",
+      "created_at": "2026-10-21T02:05:44+00:00",
+      "file": "C:\\Users\\Lahari\\AppData\\Local\\Temp\\tmp0013c92z\\catalog\\images\\2acee089a699.png",
+      "provenance": null,
+      "detection": {
+        "status": "detected",
+        "backend": "classical-cv-v1",
+        "error": null,
+        "ran_at": "2026-10-21T02:05:44+00:00",
+        "runs": 2
+      }
+    },
+    "user": {
+      "display_name": "shapes",
+      "description": "Circle, square, triangle, and rectangle",
+      "tags": {
+        "set": "section-6"
+      }
+    },
+    "corrected": false,
+    "objects": [
+      {
+        "id": "029fb9597c3b",
+        "origin": "detector",
+        "detector": "classical-cv-v1",
+        "edited_by_user": false,
+        "label": "circle",
+        "display_name": "red circle",
+        "color": "red",
+        "confidence": 1.0,
+        "bbox": {
+          "x": 40,
+          "y": 80,
+          "w": 141,
+          "h": 141
+        },
+        "attributes": {
+          "shape": "circle",
+          "colors": [
+            "red"
+          ],
+          "method": "shape fit"
+        },
+        "auto_original": null
+      },
+      {
+        "id": "17cf52c141f3",
+        "origin": "detector",
+        "detector": "classical-cv-v1",
+        "edited_by_user": false,
+        "label": "square",
+        "display_name": "blue square",
+        "color": "blue",
+        "confidence": 1.0,
+        "bbox": {
+          "x": 240,
+          "y": 80,
+          "w": 141,
+          "h": 141
+        },
+        "attributes": {
+          "shape": "square",
+          "colors": [
+            "blue"
+          ],
+          "method": "shape fit"
+        },
+        "auto_original": null
+      },
+      {
+        "id": "67e3bd2fd6c2",
+        "origin": "detector",
+        "detector": "classical-cv-v1",
+        "edited_by_user": false,
+        "label": "triangle",
+        "display_name": "green triangle",
+        "color": "green",
+        "confidence": 1.0,
+        "bbox": {
+          "x": 431,
+          "y": 71,
+          "w": 159,
+          "h": 150
+        },
+        "attributes": {
+          "shape": "triangle",
+          "colors": [
+            "green"
+          ],
+          "method": "shape fit"
+        },
+        "auto_original": null
+      },
+      {
+        "id": "c2fe06cd8887",
+        "origin": "detector",
+        "detector": "classical-cv-v1",
+        "edited_by_user": false,
+        "label": "rectangle",
+        "display_name": "purple rectangle",
+        "color": "purple",
+        "confidence": 1.0,
+        "bbox": {
+          "x": 650,
+          "y": 105,
+          "w": 171,
+          "h": 91
+        },
+        "attributes": {
+          "shape": "rectangle",
+          "colors": [
+            "purple"
+          ],
+          "method": "shape fit"
+        },
+        "auto_original": null
+      }
+    ]
+  },
+  {
+    "id": "bdac77917ea2",
+    "name": "kids_and_shapes",
+    "auto": {
+      "width": 1133,
+      "height": 380,
+      "format": "PNG",
+      "sha256": "f6d94783e7424ed300260af1bcf1a78df14c83087444b833cbff0872b5ebc856",
+      "kind": "composite",
+      "created_at": "2026-10-21T02:05:45+00:00",
+      "file": "C:\\Users\\Lahari\\AppData\\Local\\Temp\\tmp0013c92z\\catalog\\images\\bdac77917ea2.png",
+      "provenance": {
+        "request": "Create an image with a boy, a girl and colored shapes",
+        "parser": "rules",
+        "items": [
+          {
+            "term": "boy",
+            "count": 1,
+            "color": null
+          },
+          {
+            "term": "girl",
+            "count": 1,
+            "color": null
+          },
+          {
+            "term": "shapes",
+            "count": null,
+            "color": null
+          }
+        ],
+        "layout": "row, bottom-aligned, size prior per category",
+        "generated_pixels": false,
+        "sources": [
+          {
+            "image_id": "a72111bb38c9",
+            "image_name": "boy",
+            "object_id": "c98b70efdf1f",
+            "label": "boy",
+            "source_bbox": {
+              "x": 120,
+              "y": 46,
+              "w": 161,
+              "h": 333
+            },
+            "scale": 0.901,
+            "placed_bbox": {
+              "x": 40,
+              "y": 40,
+              "w": 145,
+              "h": 300
+            },
+            "z": 0
+          },
+          {
+            "image_id": "58f7acb7e084",
+            "image_name": "girl",
+            "object_id": "67377565244c",
+            "label": "girl",
+            "source_bbox": {
+              "x": 110,
+              "y": 40,
+              "w": 181,
+              "h": 346
+            },
+            "scale": 0.867,
+            "placed_bbox": {
+              "x": 225,
+              "y": 40,
+              "w": 157,
+              "h": 300
+            },
+            "z": 1
+          },
+          {
+            "image_id": "2acee089a699",
+            "image_name": "shapes",
+            "object_id": "67e3bd2fd6c2",
+            "label": "triangle",
+            "source_bbox": {
+              "x": 431,
+              "y": 71,
+              "w": 159,
+              "h": 150
+            },
+            "scale": 0.9,
+            "placed_bbox": {
+              "x": 756,
+              "y": 205,
+              "w": 143,
+              "h": 135
+            },
+            "z": 2
+          },
+          {
+            "image_id": "2acee089a699",
+            "image_name": "shapes",
+            "object_id": "029fb9597c3b",
+            "label": "circle",
+            "source_bbox": {
+              "x": 40,
+              "y": 80,
+              "w": 141,
+              "h": 141
+            },
+            "scale": 0.9,
+            "placed_bbox": {
+              "x": 422,
+              "y": 213,
+              "w": 127,
+              "h": 127
+            },
+            "z": 3
+          },
+          {
+            "image_id": "2acee089a699",
+            "image_name": "shapes",
+            "object_id": "17cf52c141f3",
+            "label": "square",
+            "source_bbox": {
+              "x": 240,
+              "y": 80,
+              "w": 141,
+              "h": 141
+            },
+            "scale": 0.9,
+            "placed_bbox": {
+              "x": 589,
+              "y": 213,
+              "w": 127,
+              "h": 127
+            },
+            "z": 4
+          },
+          {
+            "image_id": "2acee089a699",
+            "image_name": "shapes",
+            "object_id": "c2fe06cd8887",
+            "label": "rectangle",
+            "source_bbox": {
+              "x": 650,
+              "y": 105,
+              "w": 171,
+              "h": 91
+            },
+            "scale": 0.9,
+            "placed_bbox": {
+              "x": 939,
+              "y": 258,
+              "w": 154,
+              "h": 82
+            },
+            "z": 5
+          }
+        ]
+      },
+      "detection": {
+        "status": "detected",
+        "backend": "compose-v1",
+        "error": null,
+        "ran_at": null,
+        "runs": 0
+      }
+    },
+    "user": {
+      "display_name": "kids_and_shapes",
+      "description": "Create an image with a boy, a girl and colored shapes",
+      "tags": {
+        "generated": "composite"
+      }
+    },
+    "corrected": false,
+    "objects": [
+      {
+        "id": "bafbd0b0f043",
+        "origin": "composer",
+        "detector": "compose-v1",
+        "edited_by_user": false,
+        "label": "boy",
+        "display_name": "boy",
+        "color": "blue",
+        "confidence": 1.0,
+        "bbox": {
+          "x": 40,
+          "y": 40,
+          "w": 145,
+          "h": 300
+        },
+        "attributes": {
+          "source_image": "boy",
+          "source_object": "c98b70efdf1f"
+        },
+        "auto_original": null
+      },
+      {
+        "id": "083ede3233c3",
+        "origin": "composer",
+        "detector": "compose-v1",
+        "edited_by_user": false,
+        "label": "girl",
+        "display_name": "girl",
+        "color": "pink",
+        "confidence": 1.0,
+        "bbox": {
+          "x": 225,
+          "y": 40,
+          "w": 157,
+          "h": 300
+        },
+        "attributes": {
+          "source_image": "girl",
+          "source_object": "67377565244c"
+        },
+        "auto_original": null
+      },
+      {
+        "id": "b974896eef36",
+        "origin": "composer",
+        "detector": "compose-v1",
+        "edited_by_user": false,
+        "label": "circle",
+        "display_name": "red circle",
+        "color": "red",
+        "confidence": 1.0,
+        "bbox": {
+          "x": 422,
+          "y": 213,
+          "w": 127,
+          "h": 127
+        },
+        "attributes": {
+          "source_image": "shapes",
+          "source_object": "029fb9597c3b"
+        },
+        "auto_original": null
+      },
+      {
+        "id": "547c7f1393c8",
+        "origin": "composer",
+        "detector": "compose-v1",
+        "edited_by_user": false,
+        "label": "square",
+        "display_name": "blue square",
+        "color": "blue",
+        "confidence": 1.0,
+        "bbox": {
+          "x": 589,
+          "y": 213,
+          "w": 127,
+          "h": 127
+        },
+        "attributes": {
+          "source_image": "shapes",
+          "source_object": "17cf52c141f3"
+        },
+        "auto_original": null
+      },
+      {
+        "id": "32fd712b7aa6",
+        "origin": "composer",
+        "detector": "compose-v1",
+        "edited_by_user": false,
+        "label": "triangle",
+        "display_name": "green triangle",
+        "color": "green",
+        "confidence": 1.0,
+        "bbox": {
+          "x": 756,
+          "y": 205,
+          "w": 143,
+          "h": 135
+        },
+        "attributes": {
+          "source_image": "shapes",
+          "source_object": "67e3bd2fd6c2"
+        },
+        "auto_original": null
+      },
+      {
+        "id": "bc1b764ac10b",
+        "origin": "composer",
+        "detector": "compose-v1",
+        "edited_by_user": false,
+        "label": "rectangle",
+        "display_name": "purple rectangle",
+        "color": "purple",
+        "confidence": 1.0,
+        "bbox": {
+          "x": 939,
+          "y": 258,
+          "w": 154,
+          "h": 82
+        },
+        "attributes": {
+          "source_image": "shapes",
+          "source_object": "c2fe06cd8887"
+        },
+        "auto_original": null
+      }
+    ]
+  }
+]

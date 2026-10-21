@@ -1,0 +1,4 @@
+# Optional: semantic embeddings (Q2) and hosted Claude backends (Q1 vision, Q2 generation/judge)
+-r requirements.txt
+sentence-transformers>=3.0
+anthropic>=0.120
