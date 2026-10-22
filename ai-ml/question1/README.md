@@ -18,9 +18,9 @@ The run of every required scenario is in **[examples/REPORT.md](examples/REPORT.
 ## Quick start
 
 ```bash
-# from the repository root
-uv venv .venv --python 3.11          # or python -m venv .venv
-uv pip install --python .venv/Scripts/python.exe -r question1/requirements.txt
+# from ai-ml/ (venv may live at repo root: ../.venv)
+uv venv ../.venv --python 3.11          # or python -m venv ../.venv
+uv pip install --python ../.venv/bin/python -r question1/requirements.txt   # Windows: ../.venv/Scripts/python.exe
 cd question1
 
 python scripts/make_test_images.py   # (re)draws the geometric test images; photos/cartoons are committed

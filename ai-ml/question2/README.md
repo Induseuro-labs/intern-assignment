@@ -19,8 +19,8 @@ Full run with every required example: **[examples/REPORT.md](examples/REPORT.md)
 ## Quick start
 
 ```bash
-# from the repository root (shared venv with question 1)
-uv pip install --python .venv/Scripts/python.exe -r question2/requirements.txt
+# from ai-ml/ (shared venv with question 1)
+uv pip install --python ../.venv/bin/python -r question2/requirements.txt   # Windows: ../.venv/Scripts/python.exe
 cd question2
 python -m pytest -q tests          # 20 tests, offline, ~1 min (downloads 3 small models on first run)
 python scripts/run_demo.py         # writes examples/REPORT.md (uses OpenRouter if OPENROUTER_API_KEY is set)
